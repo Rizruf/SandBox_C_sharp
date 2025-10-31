@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Type_variables.AcquaintanceTask();
+            //Type_variables.AcquaintanceTask();
+            Type_variables.StructFloatAndOperation();
         }
     }
 }

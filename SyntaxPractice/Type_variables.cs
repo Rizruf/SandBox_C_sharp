@@ -23,7 +23,7 @@ public static class Type_variables
 		string text = "7";
 
 		double dot_num = 8.14;
-		float c = 9;
+		float c = 9.1f;
 
 
 		// с плавающей точкой
@@ -48,5 +48,21 @@ public static class Type_variables
         Console.WriteLine(c + " - " + "Принимает в себя значение с плавающей точкой но ограничена больше чем double");
 
         Console.WriteLine(money + " - " + "Принимает в себя точные значения удобна для подсчета денег decimal");
+    }
+
+    public static void StructFloatAndOperation()
+    {
+		Console.WriteLine("Введите дробное число 1 для выполнения операция над ним");
+		float InputNum1 = float.Parse(Console.ReadLine());
+
+        Console.WriteLine("Введите дробное число 2 для выполнения операция над ним");
+        float InputNum2 = float.Parse(Console.ReadLine());
+
+		Console.WriteLine();
+
+        Console.WriteLine("При умножении друг на друга, числа дают " + " " + (InputNum1 * InputNum2));
+        Console.WriteLine("При делении друг на друга, числа дают " + " " + (InputNum1 / InputNum2));
+        Console.WriteLine("При разности друг на друга, числа дают " + " " + (InputNum1 - InputNum2));
+        Console.WriteLine("При сумме друг на друга, числа дают " + " " + (InputNum1 + InputNum2));
     }
 }
