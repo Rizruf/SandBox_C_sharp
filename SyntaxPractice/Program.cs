@@ -10,8 +10,10 @@
             type_variables.calculetescircle();
             Type_variables.Remainder();
             Type_variables.CalculetIMT();
-            Type_variables.InfoObPerson();*/
+            Type_variables.InfoObPerson();
             Type_variables.ExchangeOfValues();
+            Type_variables.LeightText();*/
+            Type_variables.CalculeteColories();
 
         }
     }

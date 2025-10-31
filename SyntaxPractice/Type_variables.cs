@@ -152,4 +152,26 @@ public static class Type_variables
 
 		Console.WriteLine("Получившиеся значение после перемешки - " + a + " и " + b);
 	}
+
+	public static void LeightText()
+	{
+		Console.WriteLine("Введите любое слово чтобы высчитать длину этого слоав");
+		string text = Console.ReadLine();
+
+		Console.WriteLine("Длинна вашего слова или текста - " + text.Length);
+	}
+
+	public static void CalculeteColories()
+	{
+
+        Console.Write("Введите колличество белков - ");
+		double proteins = Convert.ToDouble(Console.ReadLine());
+        Console.Write("Введите колличество жиров - ");
+        double fats = Convert.ToDouble(Console.ReadLine());
+        Console.Write("Введите колличество угливодов - ");
+        double carbohydrates = Convert.ToDouble(Console.ReadLine());
+
+		Console.WriteLine("Калорийность - " + (((proteins + carbohydrates) * 4) + fats * 9));
+    }
+
 }
