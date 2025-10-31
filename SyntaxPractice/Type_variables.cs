@@ -82,4 +82,61 @@ public static class Type_variables
 
 		Console.WriteLine("Площать вашего круга - " + S);
 	}
+
+	public static void Remainder()
+	{
+		Console.WriteLine("Введите целое число для определения четное оно или не четное");
+		int number = Convert.ToInt32(Console.ReadLine());
+
+		if (number % 2 == 0)
+		{
+			Console.WriteLine("Число четное вариант 1");
+		}
+        else
+        {
+			Console.WriteLine("Число не четное вариант 1");
+        }
+
+		bool value = number % 2 == 0;
+
+		if (value)
+		{
+            Console.WriteLine("Число четное вариант 2");
+        }
+		else
+		{
+            Console.WriteLine("Число не четное вариант 2");
+        }
+
+		string resault = number % 2 == 0 ? "Чет" : "Нечет";
+		Console.WriteLine(resault + " вариант 3");
+    }
+
+	public static void InfoObPerson()
+	{
+		Console.Write("Введите введите свое имя - ");
+		string name = Console.ReadLine();
+
+        Console.Write("Введите свою фамилию - ");
+        string secondName = Console.ReadLine();
+
+        Console.Write("Введите ввеите город в котором вы проживаете - ");
+        string city = Console.ReadLine();
+
+		Console.WriteLine("Вы проживаете в городе - " + city + " вас зовут - " + name + " " + secondName);
+    }
+
+	public static void CalculetIMT()
+	{
+		Console.WriteLine("Введите ваши параметры\n");
+
+		Console.Write("Ваш вес в кг - ");
+		double weight = Convert.ToDouble(Console.ReadLine());
+
+		Console.Write("Ваш рост в см - ");
+        double height = Convert.ToDouble(Console.ReadLine());
+		height = height / 100;
+
+		Console.WriteLine("Ваш ИМТ - " + (weight / Math.Pow(height, 2)));
+    }
 }
