@@ -139,4 +139,17 @@ public static class Type_variables
 
 		Console.WriteLine("Ваш ИМТ - " + (weight / Math.Pow(height, 2)));
     }
+
+	public static void ExchangeOfValues()
+	{
+		int a = 10,b = 20, c = 0;
+
+		Console.WriteLine("Изначальнае значения " + a + " и " + b);
+
+		c = a;
+		a = b;
+		b = c;
+
+		Console.WriteLine("Получившиеся значение после перемешки - " + a + " и " + b);
+	}
 }
