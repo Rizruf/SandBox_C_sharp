@@ -5,7 +5,8 @@
         static void Main(string[] args)
         {
             //Type_variables.AcquaintanceTask();
-            Type_variables.StructFloatAndOperation();
+            //Type_variables.StructFloatAndOperation();
+            Type_variables.ConvertStringAndAgePerson();
         }
     }
 }

@@ -65,4 +65,11 @@ public static class Type_variables
         Console.WriteLine("При разности друг на друга, числа дают " + " " + (InputNum1 - InputNum2));
         Console.WriteLine("При сумме друг на друга, числа дают " + " " + (InputNum1 + InputNum2));
     }
+	public static void ConvertStringAndAgePerson()
+	{
+		Console.WriteLine("Введите число которое соотвествует вашим годам жизни");
+		int Age = Convert.ToInt32 (Console.ReadLine());
+
+		Console.WriteLine("В следующем году вам будет - " +  (++Age));
+	}
 }
