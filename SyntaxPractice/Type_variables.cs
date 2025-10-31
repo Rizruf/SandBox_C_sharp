@@ -72,4 +72,14 @@ public static class Type_variables
 
 		Console.WriteLine("В следующем году вам будет - " +  (++Age));
 	}
+
+	public static void CalculeteSCircle()
+	{
+		Console.Write("Введите радиус вашего круга  - ");
+		double radius = Convert.ToDouble(Console.ReadLine());
+
+		double S = Math.PI * Math.Pow(radius, 2);
+
+		Console.WriteLine("Площать вашего круга - " + S);
+	}
 }

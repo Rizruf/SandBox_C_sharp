@@ -6,7 +6,8 @@
         {
             //Type_variables.AcquaintanceTask();
             //Type_variables.StructFloatAndOperation();
-            Type_variables.ConvertStringAndAgePerson();
+            //Type_variables.ConvertStringAndAgePerson();
+            Type_variables.CalculeteSCircle();
         }
     }
 }
