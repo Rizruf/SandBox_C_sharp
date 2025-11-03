@@ -16,8 +16,9 @@
             Type_variables.CalculeteColories();
             Type_variables.CurrencyTransfer();
             Type_variables.HoursMinutes();
-            Type_variables.Counter(); */
-            Type_variables.CompoundAssignmentAndChar();
+            Type_variables.Counter(); 
+            Type_variables.CompoundAssignmentAndChar(); */
+            Type_variables.DateAndLogicalOperators();
 
         }
     }
