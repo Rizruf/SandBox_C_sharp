@@ -211,6 +211,7 @@ public static class Type_variables
 		Console.WriteLine("\n\nОтметим что после прибавления или отнимания, число всегда становится новым т.е меняется сама переменная,\n а так же постфиксный декремент и инкремент, при дейтвии над переменной учитывают только на следующем шаге свое значение.");
 
     }
+
 	public static void CompoundAssignmentAndChar()
 	{
 		int num = 10;
@@ -232,6 +233,7 @@ public static class Type_variables
 		Console.Write($"{letter1} {letter2} {letter3}");
 
     }
+
 	public static void DateAndLogicalOperators()
 	{
 		DateTime rightNow = DateTime.Now;
@@ -246,6 +248,27 @@ public static class Type_variables
                             "\nА несокращенные (&, |) операторы всегда вычисляют обе части выражения, независимо от результата левой части.\"");
 
 	}
+	
+	public static void STriangleTemperature()
+	{
+		Console.Write("Введите основание вашего треугольник - ");
+		double baseTriangle = Convert.ToDouble(Console.ReadLine());
+
+		Console.Write("Введите высоту вашего треугольника - ");
+		double heightTriangle = Convert.ToDouble(Console.ReadLine());
+
+		double STriangle = 0.5 * baseTriangle * heightTriangle;
+
+		Console.Write("Площадь вашего треугольника равняется - " + STriangle);
+
+		Console.Write("\n\nТеперь введите температуру в цельсиях - ");
+		double Celsius = Convert.ToDouble(Console.ReadLine());
+
+		double FTemperature = Celsius*9.0/5+32;
+
+		Console.Write("Ваша температура по фаренгейтам равна - " + FTemperature);
+	}
+	
 
 
 }
