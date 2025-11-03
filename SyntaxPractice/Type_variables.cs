@@ -269,6 +269,28 @@ public static class Type_variables
 		Console.Write("Ваша температура по фаренгейтам равна - " + FTemperature);
 	}
 	
+	public static void CostAndDiscountAlsoLong()
+	{
+		//x 100
+
+		//y %
+
+		Console.Write("Введите цену своего товара - ");
+		double cost = Convert.ToDouble(Console.ReadLine());
+
+		Console.Write("Введите процент скидки на этикетке - ");
+		double procentDiscount = Convert.ToDouble(Console.ReadLine());
+
+		double discount = cost * procentDiscount / 100;
+
+		double costWithDiscount = cost - discount;
+
+		Console.WriteLine("Ваша цена с учето скидки - " + costWithDiscount);
+
+		long tenMilliards = Convert.ToInt64(Math.Pow(10, 10));
+
+		Console.WriteLine($"{tenMilliards} {(tenMilliards-(Math.Pow(10,2)))}");
+	}
 
 
 }

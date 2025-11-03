@@ -18,8 +18,9 @@
             Type_variables.HoursMinutes();
             Type_variables.Counter(); 
             Type_variables.CompoundAssignmentAndChar(); 
-            Type_variables.DateAndLogicalOperators();*/
-            Type_variables.STriangleTemperature();
+            Type_variables.DateAndLogicalOperators();
+            Type_variables.STriangleTemperature(); */
+            Type_variables.CostAndDiscountAlsoLong();
 
         }
     }
