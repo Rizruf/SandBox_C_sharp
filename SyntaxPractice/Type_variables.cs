@@ -292,5 +292,14 @@ public static class Type_variables
 		Console.WriteLine($"{tenMilliards} {(tenMilliards-(Math.Pow(10,2)))}");
 	}
 
+	public static void WayToFileAndVerbatum()
+	{
+        Console.WriteLine("Путь к файлу: \"C:\\Program Files\\MyApp\"");
+
+		Console.WriteLine(@"""C:\Program Files\MyApp"".");
+
+
+    }
+
 
 }
