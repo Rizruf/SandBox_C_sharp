@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
 
 public static class Type_variables
 {
@@ -196,4 +197,17 @@ public static class Type_variables
 		Console.WriteLine("Ваши минуты соответствуют - " + hours + " часам " + minutes + " минутам."); 
 	}
 
+	public static void Counter()
+	{
+		Console.Write("Введите любое целое число - ");
+		int num = Convert.ToInt32(Console.ReadLine());
+		
+		Console.WriteLine("Прибавим к числу 1 через инкремент (префиксный) который сначала прибавляется, а потом записывается - " + ++num);
+		Console.WriteLine("Прибавим к числу 1 через инкремент (постфиксный) который сначала получает в переменную число,\n а потом уже прибавляется - " + num++);
+        Console.WriteLine("\nОтнимим от числа 1 аналогично с декрементом (постфиксным) - " + num--);
+        Console.WriteLine("Отнимим от числа 1 аналогично с декрементом (префиксным) - " + --num);
+
+		Console.WriteLine("\n\nОтметим что после прибавления или отнимания, число всегда становится новым т.е меняется сама переменная,\n а так же постфиксный декремент и инкремент, при дейтвии над переменной учитывают только на следующем шаге свое значение.");
+
+    }
 }
