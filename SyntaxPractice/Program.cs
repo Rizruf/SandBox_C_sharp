@@ -13,8 +13,9 @@
             Type_variables.InfoObPerson();
             Type_variables.ExchangeOfValues();
             Type_variables.LeightText();
-            Type_variables.CalculeteColories();*/
-            Type_variables.CurrencyTransfer();
+            Type_variables.CalculeteColories();
+            Type_variables.CurrencyTransfer();*/
+            Type_variables.HoursMinutes();
 
         }
     }

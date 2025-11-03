@@ -185,4 +185,15 @@ public static class Type_variables
 		Console.WriteLine("После конвертации, ваша сумма в долларах составила - " + dollars);
     }
 
+	public static void HoursMinutes()
+	{
+		Console.Write("Введите колличество минут - "); 
+		int allMinutes = Convert.ToInt32(Console.ReadLine());
+
+		int hours = allMinutes / 60;
+		int minutes = allMinutes % 60;
+
+		Console.WriteLine("Ваши минуты соответствуют - " + hours + " часам " + minutes + " минутам."); 
+	}
+
 }
