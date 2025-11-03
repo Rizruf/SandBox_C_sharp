@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Security.Cryptography.X509Certificates;
 
 public static class Type_variables
@@ -210,4 +211,31 @@ public static class Type_variables
 		Console.WriteLine("\n\nОтметим что после прибавления или отнимания, число всегда становится новым т.е меняется сама переменная,\n а так же постфиксный декремент и инкремент, при дейтвии над переменной учитывают только на следующем шаге свое значение.");
 
     }
+	public static void CompoundAssignmentAndChar()
+	{
+		int num = 10;
+
+
+		Console.WriteLine("\tДействия num += 5; num -= 3; num *= 2; tnum /= 4;\n");
+
+		num += 5;
+		num -= 3;
+		num *= 2;
+		num /= 4;
+
+		Console.WriteLine("Число равняется - " + num + " Данные действия являются сокращением для обычных бинарных операций над переменной.\nИзначальное значение числа = 10.\nДальше оно изменяется 15, 12, 24, 6. Поэтому и в ответ получем шесть.");
+
+		char letter1 = 'A', letter2 = 'B', letter3 = 'C';
+
+		Console.WriteLine("\nТак же вывожу значения хранящиеся в char переменных по заданию.");
+
+		Console.Write($"{letter1} {letter2} {letter3}");
+
+    }
+	public static void DateAndLogicalOperators()
+	{
+
+	}
+
+
 }
