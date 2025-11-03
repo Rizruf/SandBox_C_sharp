@@ -174,4 +174,15 @@ public static class Type_variables
 		Console.WriteLine("Калорийность - " + (((proteins + carbohydrates) * 4) + fats * 9));
     }
 
+	public static void CurrencyTransfer()
+	{
+		const decimal coursRub = 0.012363m;
+
+        Console.Write("Введите сумму в рублях для перевода в доллары - ");
+		decimal rubles = Convert.ToDecimal(Console.ReadLine());
+
+		decimal dollars = rubles * coursRub;
+		Console.WriteLine("После конвертации, ваша сумма в долларах составила - " + dollars);
+    }
+
 }

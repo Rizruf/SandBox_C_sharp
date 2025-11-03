@@ -12,8 +12,9 @@
             Type_variables.CalculetIMT();
             Type_variables.InfoObPerson();
             Type_variables.ExchangeOfValues();
-            Type_variables.LeightText();*/
-            Type_variables.CalculeteColories();
+            Type_variables.LeightText();
+            Type_variables.CalculeteColories();*/
+            Type_variables.CurrencyTransfer();
 
         }
     }
