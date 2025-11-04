@@ -519,4 +519,44 @@ public static class Type_variables
 		else Console.Write("Ошибка - Доступ заблокирован!\n");
 
     }
+
+	public static void StringTextDaysWorkAgeCategory ()
+	{
+		Console.WriteLine("Введите 2 имени и мы проверим их на совпадение");
+        Console.Write("\nВведите 1 имя");
+        string name1 = Console.ReadLine();
+
+        Console.Write("\nВведите 2 имя");
+        string name2 = Console.ReadLine();
+
+		if (name1.ToLower() == name2.ToLower())
+		{
+			Console.WriteLine("браво имена одинаковые");
+		}
+        else Console.WriteLine("имена разные");
+
+		if (name1.Equals(name2, StringComparison.OrdinalIgnoreCase)) // сложное какое-то для новичка.
+		{
+            Console.WriteLine("браво имена одинаковые");
+        }
+		else Console.WriteLine("имена разные");
+
+
+		Console.WriteLine("Введите теперь свой возраст");
+		int age = Convert.ToInt32(Console.ReadLine());
+
+		if (age > 0 && age <= 12) Console.WriteLine("Вы подросток");
+        else if (age >= 18 && age <= 59) Console.WriteLine("Вы взрослый");
+        else if (age > 59) Console.WriteLine("Вы состарились");
+
+
+        Console.WriteLine("Введите номер дня недели - ");
+		int day = Convert.ToInt32(Console.ReadLine());
+
+		if (day <= 5 && day > 0) Console.WriteLine("Рабочий день");
+		else if (day > 5 && day <= 7) Console.WriteLine("Не рабочий день");
+		else Console.WriteLine("Чет вы не то ввели");
+
+    }
+
 }

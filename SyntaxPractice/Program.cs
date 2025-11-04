@@ -24,8 +24,9 @@
             Type_variables.WayToFileAndVerbatum();
             Type_variables.ObjectAndValues();
             Type_variables.EvenAndOddNumberRange(); 
-            Type_variables.CalculatorLeapYearAndTernaryOper(); */
-            Type_variables.DaysDrinksLoginAndPassword();
+            Type_variables.CalculatorLeapYearAndTernaryOper(); 
+            Type_variables.DaysDrinksLoginAndPassword(); */
+            Type_variables.StringTextDaysWorkAgeCategory();
         }
     }
 }
