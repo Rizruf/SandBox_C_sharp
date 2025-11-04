@@ -600,8 +600,73 @@ public static class Type_variables
 		else if (score <= 60) Console.WriteLine("C");
 		else if (score <= 80) Console.WriteLine("B");
 		else if (score <= 100) Console.WriteLine("A");
-		else Console.WriteLine("Такого значения не существуюет";
+		else Console.WriteLine("Такого значения не существуюет");
 
+    }
+
+	public static void HoursLoginPasswordSwitchFalling()
+	{
+		Console.Write("Введите логин: ");
+		string loginPerson = Console.ReadLine();
+		const string login = "LOOP";
+
+		if (login == loginPerson)
+		{
+            const string password = "Pass";
+            Console.Write("Введите пароль:");
+			string passwordPerson = Console.ReadLine();
+			if (password == passwordPerson)
+			{
+                Console.WriteLine("Доступ открыт.");
+                Console.WriteLine("Теперь вы можете посмотреть по формату 24 часа, какая сейчас часть дня.");
+
+				Console.Write("\nВведите число от 0 до 23 чтобы узнать какая сейчас часть дня - ");
+				int time = Convert.ToInt32(Console.ReadLine());
+
+                if (time >= 5 && time <= 11) 
+                {
+                    Console.WriteLine("Сейчас утро");
+                }
+                else if (time >= 12 && time <= 17) 
+                {
+                    Console.WriteLine("Сейчас день");
+                }
+                else if (time >= 18 && time <= 23) 
+                {
+                    Console.WriteLine("Сейчас вечер");
+                }
+                else if (time >= 0 && time <= 4)
+                {
+                    Console.WriteLine("Сейчас ночь");
+                }
+                else 
+                {
+                    Console.WriteLine("Неверное время");
+                }
+
+            }
+			else Console.WriteLine("Доступ запрещен.");
+
+        }
+		else Console.WriteLine("Доступ запрещен.");
+
+
+		Console.WriteLine("Введите число от 1 до 7");
+		int days = Convert.ToInt32(Console.ReadLine());
+
+		switch (days)
+		{
+			case 1:
+			case 2:
+			case 3:
+            case 4:
+            case 5:
+				Console.WriteLine("Это рабочий день.");
+                break;
+			default:
+				Console.WriteLine("Что то не то записали.");
+				break;
+        }
     }
 
 }
