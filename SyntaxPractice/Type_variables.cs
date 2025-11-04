@@ -331,5 +331,81 @@ public static class Type_variables
 		Console.WriteLine(dateTimeFormat);
 	}
 
+	public static void EvenAndOddNumberRange()
+	{
+		Console.WriteLine("Введите число для проверки на четность и положительность, отритательность");
+		int num = Convert.ToInt32(Console.ReadLine());
+
+		if (num % 2 == 0)
+		{
+            if (num < 0)
+            {
+                Console.WriteLine("Число четное, но отрицательное");
+            }
+            else
+            {
+                Console.WriteLine("Число четное, но положительное");
+            }
+        }
+		else
+		{
+            if (num < 0)
+            {
+                Console.WriteLine("Число не четное, но отрицательное");
+            }
+            else
+            {
+                Console.WriteLine("Число не четное, но положительное");
+            }
+        }
+
+		if (num % 2 == 0 && num < 0)
+		{
+
+		}
+		else if (num % 2 == 0 && num > 0)
+		{
+
+		}
+		else if (num % 2 != 0 && num < 0)
+		{
+
+		}
+		else
+
+			Console.Write("Введите целое число которое хотите - ");
+		int numberToRange = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Укажите начальное число для диапазона - ");
+        int rangeForNumber = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Укажите конечное число для диапазона - ");
+        int rangeForNumberEnd = Convert.ToInt32(Console.ReadLine());
+
+        bool ans = numberToRange <= rangeForNumberEnd && numberToRange>= rangeForNumber;
+
+		switch (ans)
+		{
+			case true:
+                Console.Write("Ваше число входит в диапазон");
+                break;
+			case false:
+                Console.Write("Ваше число не входит в диапазон");
+                break;
+			default:
+				Console.WriteLine("Вы ввели не число");
+				break;
+		}
+
+		if (numberToRange <= rangeForNumberEnd && numberToRange >= rangeForNumber)
+		{
+            Console.WriteLine("\nВаше число входит в диапазон");
+        }
+		else
+		{
+            Console.WriteLine("\nВаше число не входит в диапазон");
+        }
+	}
+
 
 }
