@@ -27,8 +27,9 @@
             Type_variables.CalculatorLeapYearAndTernaryOper(); 
             Type_variables.DaysDrinksLoginAndPassword(); 
             Type_variables.StringTextDaysWorkAgeCategory(); 
-            Type_variables.TriangleEstimationQuadraticEquation();*/
-            Type_variables.HoursLoginPasswordSwitchFalling();
+            Type_variables.TriangleEstimationQuadraticEquation();
+            Type_variables.HoursLoginPasswordSwitchFalling();*/
+            Type_variables.SimbolsMaxBalanceGroupSwich();
         }
     }
 }

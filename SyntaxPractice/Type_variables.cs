@@ -669,4 +669,43 @@ public static class Type_variables
         }
     }
 
+	public static void SimbolsMaxBalanceGroupSwich()
+	{
+		int value1 = 10000;
+		int value2 = 200;
+        int value3 = 3500;
+		int ans = Math.Max(value1, value2);
+		ans = Math.Max(ans, value3);
+
+		double balance = 123342.32;
+
+        Console.WriteLine("Снимите деньгу");
+		int sum = Convert.ToInt32(Console.ReadLine());
+
+		if (sum > 0 && sum <= balance && sum % 100 == 0)
+		{
+			balance -= sum;
+			Console.WriteLine("Вы сняли - " + sum + " Ваш баланс - " + balance);
+		}
+		else
+		{
+            Console.WriteLine("Не хватает средств или что-то пошло не так");
+        }
+
+			Console.WriteLine("Введите символ или одно число от 1 до 9.");
+		char symbol = Convert.ToChar(Console.ReadLine());
+
+		if (char.IsDigit(symbol))
+		{
+			Console.WriteLine("Это число");
+
+        }
+		else if (char.IsLetter(symbol))
+		{
+            Console.WriteLine("Это символ");
+        }
+		else Console.WriteLine("Что то не то");
+
+
+    }
 }
