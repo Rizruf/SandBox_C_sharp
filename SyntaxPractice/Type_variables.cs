@@ -298,8 +298,38 @@ public static class Type_variables
 
 		Console.WriteLine(@"""C:\Program Files\MyApp"".");
 
-
     }
+
+	public static void ObjectAndValues()
+	{
+		object obj = "Hello";
+
+		Console.WriteLine("Проверяем является ли наш obj строкой");
+
+		if (obj is string)
+		{
+			Console.WriteLine("Наш obj является строкой");
+		}
+		else if (obj is int)
+		{
+			Console.WriteLine("Наш obj является целым числом");
+		}
+		else
+		{
+            Console.WriteLine("Наш obj является не числом и не строкой");
+        }
+
+		Console.WriteLine(@"""С\Programm Files\drone\next.exe"""); //Отработка вербатум и экранирование для запоминания.
+		Console.WriteLine("C\\Program Files\\drone\\next.exe");
+
+
+		Console.WriteLine($"{default(int)} {default(bool)} {default(string)} {default(long)} {default(decimal)} {default(short)}");
+		
+		DateTime rightNow = DateTime.Now;
+		string dateTimeFormat = rightNow.ToString("dd.MM.yyyy"); //повторение вывода сегодняшней даты в определенном формате.
+
+		Console.WriteLine(dateTimeFormat);
+	}
 
 
 }
