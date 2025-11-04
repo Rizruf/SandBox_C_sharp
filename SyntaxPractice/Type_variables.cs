@@ -407,5 +407,48 @@ public static class Type_variables
         }
 	}
 
+	public static void CalculatorLeapYearAndTernaryOper()
+	{
+		Console.Write("Введите первое число - ");
+		double num1 = Convert.ToDouble(Console.ReadLine());
 
+		Console.Write("Введите второе число - ");
+		double num2 = Convert.ToDouble(Console.ReadLine());
+
+		Console.Write("Введите одно из перечисленных операций над числами +, -, /, * - ");
+		char simbol = Convert.ToChar(Console.ReadLine());
+
+		double ans;
+
+		if (simbol == '+') Console.WriteLine("Ответ -" + (num1 + num2));
+		else if (simbol == '-') Console.WriteLine("Ответ -" + (num1 - num2));
+		else if (simbol == '*') Console.WriteLine("Ответ -" + (num1 * num2));
+		else if (simbol == '/') Console.WriteLine("Ответ -" + (num1 / num2));
+		else Console.WriteLine("Ввели что-то не то.");
+
+
+		Console.Write("\nА теперь давайте определим высокосный ли год, введите год который хотите - ");
+		int year = Convert.ToInt32(Console.ReadLine());
+
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+        {
+            Console.WriteLine("Год высокосный");
+        }
+        else
+        {
+            Console.WriteLine("Год не высокосный");
+        }
+
+		Console.WriteLine ("Вернусь к задаче 5 и напишу ее через тернарный оператор напиши мне целое число - ");
+		int num = Convert.ToInt32(Console.ReadLine());
+
+		string newans = num % 2 == 0 ? "четное" : "нечетное";
+
+        Console.WriteLine(newans);
+    }
+
+	public static void DaysDrinksLoginAndPassword()
+	{
+
+	}
 }
