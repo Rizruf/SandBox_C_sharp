@@ -559,4 +559,49 @@ public static class Type_variables
 
     }
 
+	public static void TriangleEstimationQuadraticEquation()
+	{
+		Console.WriteLine("Введите стороны треугольника для того чтобы понять существует ли треугольник");
+		Console.WriteLine("Первая сторона");
+		double Aside = Convert.ToInt32(Console.ReadLine());
+		Console.WriteLine("Вторая сторона");
+		double Bside = Convert.ToInt32(Console.ReadLine());
+		Console.WriteLine("Стретья сторона");
+		double Cside = Convert.ToInt32(Console.ReadLine());
+
+		if (Aside + Bside > Cside && Bside + Cside > Aside && Aside + Cside > Bside) Console.WriteLine("Треугольник существует");
+		else Console.WriteLine("Треугольник не существует");
+
+		Console.WriteLine("Давайте найдем решение квадратного уравнения");
+
+		Console.WriteLine("Введите число a - ");
+		double a = Convert.ToInt32(Console.ReadLine());
+
+		Console.WriteLine("Введите число b - ");
+		double b = Convert.ToInt32(Console.ReadLine());
+
+		Console.WriteLine("Введите число c - ");
+		double c = Convert.ToInt32(Console.ReadLine());
+
+		double dis = Math.Pow(b, 2) - 4.0 * a * c;
+
+
+		Console.WriteLine("Дискременант равен - " + dis);
+
+		if (dis > 0) Console.WriteLine("два корня");
+		else if (dis < 0) Console.WriteLine("нет корней");
+		else Console.WriteLine("один корень");
+
+		Console.WriteLine("Введите число баллов для оценки от 0 до 100 - ");
+		int score = Convert.ToInt32(Console.ReadLine());
+
+		if (score >= 0 && score <= 20) Console.WriteLine("F");
+		else if (score <= 40) Console.WriteLine("D");
+		else if (score <= 60) Console.WriteLine("C");
+		else if (score <= 80) Console.WriteLine("B");
+		else if (score <= 100) Console.WriteLine("A");
+		else Console.WriteLine("Такого значения не существуюет";
+
+    }
+
 }
