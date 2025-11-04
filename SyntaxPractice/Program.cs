@@ -23,8 +23,9 @@
             Type_variables.CostAndDiscountAlsoLong();
             Type_variables.WayToFileAndVerbatum();
             Type_variables.ObjectAndValues();
-            Type_variables.EvenAndOddNumberRange(); */
-            Type_variables.CalculatorLeapYearAndTernaryOper();
+            Type_variables.EvenAndOddNumberRange(); 
+            Type_variables.CalculatorLeapYearAndTernaryOper(); */
+            Type_variables.DaysDrinksLoginAndPassword();
         }
     }
 }

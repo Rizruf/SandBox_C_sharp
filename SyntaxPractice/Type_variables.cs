@@ -449,6 +449,74 @@ public static class Type_variables
 
 	public static void DaysDrinksLoginAndPassword()
 	{
+        Console.Write("Введите номер дня недели чтобы мы поняли что это за день - ");
+		int day = Convert.ToInt32(Console.ReadLine());
 
-	}
+		switch (day)
+		{
+			case 1:
+                Console.WriteLine("Понедельник");
+                break;
+            case 2:
+                Console.WriteLine("Вторник");
+                break;
+            case 3:
+                Console.WriteLine("Среда");
+                break;
+            case 4:
+                Console.WriteLine("Четверг");
+                break;
+            case 5:
+                Console.WriteLine("Пятница");
+                break;
+            case 6:
+                Console.WriteLine("Суббота");
+                break;
+            case 7:
+                Console.WriteLine("Воскресенье");
+                break;
+			default:
+                Console.WriteLine("Вы ввели не номер дня недели");
+				break;
+        }
+
+		Console.WriteLine("Вижу вы хотите выпиить у нас есть 1 - кофе, 2 - чай, 3 - сок, 4 - коктейль\n");
+		int numDrinks = Convert.ToInt32(Console.ReadLine());
+
+		switch (numDrinks)
+		{
+            case 1:
+                Console.WriteLine("Вы выбрали кофе - его стоимость 250 рублей");
+                break;
+            case 2:
+                Console.WriteLine("Вы выбрали чай - его стоимость 350 рублей");
+                break;
+            case 3:
+                Console.WriteLine("Вы выбрали сок - его стоимость 450 рублей");
+                break;
+            case 4:
+                Console.WriteLine("Вы выбрали коктейль - его стоимость 550 рублей");
+                break;
+			default:
+                Console.WriteLine("Сожалееем такого напитка нет в меню!");
+                break;
+
+        }
+
+		Console.WriteLine("Введите пароль и логин для входа в систему лояльности отеля");
+        Console.Write("\nЛогин: ");
+		string loginPers = Console.ReadLine();
+        Console.Write("Пароль: ");
+        string passwordPers = Console.ReadLine();
+
+		const string login = "HelloWorld";
+		const string password = "1";
+
+		if (loginPers == login && passwordPers == password)
+		{
+            Console.Write("Спасибо что выбрали нас - Доступ разрешен!");
+        }
+		else Console.Write("Ошибка - Доступ заблокирован!\n");
+
+    }
 }
