@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualBasic;
 using System;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 
 public static class Type_variables
@@ -707,5 +708,267 @@ public static class Type_variables
 		else Console.WriteLine("Что то не то");
 
 
+    }
+
+	public static void Coffee2NullVowelOrAConsonantTaxCalculate()
+	{
+		Console.WriteLine("Введите напиток который хотите выпить 1 - сок, 2 - кофе, 3 - коктейль.");
+		int drinks = Convert.ToInt32(Console.ReadLine);
+		switch (drinks)
+		{
+			case 1:
+				Console.WriteLine("Вы выбрали сок, с каким вкусом желаете? 1 - апельсин, 2 - манго, 3 - банан.");
+				int taste1 = Convert.ToInt32(Console.ReadLine());
+				switch (taste1)
+				{
+					case 1:
+						Console.WriteLine("Ваш напиток, сок апельсиновый");
+						break;
+					case 2:
+						Console.WriteLine("Ваш напиток, сок из манго");
+						break;
+					case 3:
+						Console.WriteLine("Ваш напиток, сок банановый");
+						break;
+					default:
+						Console.WriteLine("Такого вкуса сока нет в меню");
+						break;
+				}
+				break;
+			case 2:
+				Console.WriteLine("Вы выбрали кофе, какой желаете? 1 - эспрессо, 2 - капучино, 3 - фрапучино.");
+				int taste2 = Convert.ToInt32(Console.ReadLine());
+				switch (taste2)
+				{
+					case 1:
+						Console.WriteLine("Ваш напиток, кофе эспрессо");
+						break;
+					case 2:
+						Console.WriteLine("Ваш напиток, кофе купучино");
+						break;
+					case 3:
+						Console.WriteLine("Ваш напиток, кофе фрапучино");
+						break;
+					default:
+						Console.WriteLine("Такого кофе нет в меню");
+						break;
+				}
+				break;
+			case 3:
+				Console.WriteLine("Вы выбрали коктейль, какой желаете? 1 - пинчер-розе, 2 - золотой апельсин, 3 - пина-колада.");
+				int taste3 = Convert.ToInt32(Console.ReadLine());
+				switch (taste3)
+				{
+					case 1:
+						Console.WriteLine("Ваш напиток, коктейль пинчер розе");
+						break;
+					case 2:
+						Console.WriteLine("Ваш напиток, коктейль золотой апельсин");
+						break;
+					case 3:
+						Console.WriteLine("Ваш напиток, коктейль пина-колада");
+						break;
+					default:
+						Console.WriteLine("Такого коктейля нет в меню");
+						break;
+				}
+				break;
+
+			default:
+				Console.WriteLine("Такого напитка нет в меню");
+				break;
+        }
+
+		Console.WriteLine("Введите ничего или же что-то");
+        string nullOrEmpty = Console.ReadLine();
+
+		if (string.IsNullOrEmpty(nullOrEmpty))
+		{
+            Console.WriteLine("Вы ввели ничего");
+        }
+		else Console.WriteLine("Вы что-то ввели");
+
+		Console.WriteLine("Введите одну букву, а мы скажем глассная она или согласня");
+		string letter = Console.ReadLine();
+
+		switch (letter.ToUpper())
+		{
+			case "A": //гласные через проваливание
+            case "E":
+            case "I":
+            case "O":
+            case "U":
+				Console.WriteLine("Ваша буква гласная");
+				break;
+
+            case "B": //согласные через проваливание
+            case "C":
+            case "D":
+            case "F":
+            case "G":
+            case "H":
+            case "J":
+            case "K":
+            case "L":
+            case "N":
+            case "M":
+            case "P":
+            case "Q":
+            case "R":
+            case "S":
+            case "T":
+            case "V":
+            case "W":
+            case "X":
+            case "Y":
+            case "Z":
+                Console.WriteLine("Ваша буква согласная");
+				break;
+
+
+			default:
+				Console.WriteLine("Вы ввели что-то не то");
+				break;
+        }
+
+        Console.Write("Введите ваш доход - ");
+        double cash = Convert.ToDouble(Console.ReadLine());
+
+        if (cash <= 0)
+        {
+            Console.WriteLine("Доход должен быть положительным.");
+        }
+        else if (cash <= 10000) 
+        {
+            
+            Console.WriteLine("Налог 5%");
+        }
+        else if (cash <= 50000) 
+        {
+            
+            Console.WriteLine("Налог 10%");
+        }
+        else 
+        {
+            
+            Console.WriteLine("Налог 15%");
+        }
+    }
+	public static void ForSumNumberDoWhile()
+	{
+		Console.WriteLine("Выводим все числа которые делятся на 5 без остатка, ограничение до 100");
+		for (int i = 1; i < 100; i++)
+		{
+			if (i % 5 == 0)
+			{
+				Console.Write(i + " ");
+			}
+		}
+
+		int sum = 0;
+
+		Console.WriteLine("\nВывод суммы все чисел от 1 до 50");
+		for (int k = 1; k <= 50; k++)
+		{
+			sum += k;
+		}
+		Console.WriteLine("Сумма - " + sum);
+
+		Console.WriteLine("Вводи число а мы его суммируем");
+		int value;
+		bool condition = true;
+        int summator = 0;
+
+
+		while (condition)
+		{
+			Console.Write("Вводи число - ");
+			value = Convert.ToInt32(Console.ReadLine());
+
+			if (value == 0)
+			{
+				Console.WriteLine("Подсчет закончен ваше число - " + summator);
+				condition = false;
+			}
+			else
+			{
+				summator += value;
+				Console.WriteLine("Добавили число - " + value);
+			}
+		}
+
+		while (true)
+		{
+            Console.Write("Вводи число - ");
+            value = Convert.ToInt32(Console.ReadLine());
+
+            if (value == 0)
+			{
+				break;
+			}
+			else
+			{
+                summator += value;
+                Console.WriteLine("Добавили число - " + value);
+            }
+		}
+		
+		Console.WriteLine("Поиграем в угадайку");
+		Random rnd = new Random();
+		int numberSecret = rnd.Next(1, 100);
+		int number = 0;
+
+		while (true)
+		{
+            Console.Write("Вводи число - ");
+			number = Convert.ToInt32(Console.ReadLine());
+
+			if (number > numberSecret)
+			{
+                Console.WriteLine("Меньше");
+            }
+			else if (number < numberSecret)
+			{
+                Console.WriteLine("Больше");
+            }
+			else
+			{
+                Console.WriteLine("Угадал! Это число - " + numberSecret);
+				break;
+            }
+        }
+
+		Console.WriteLine("Будем вводить пароль крутой.");
+		const string password = "AcBd31";
+		string input;
+
+		while (true)
+		{
+			Console.Write("Введите пароль - ");
+			input = Console.ReadLine();
+			if (input == password) 
+			{
+                Console.WriteLine("Доступ разрешен");
+				break;
+            }
+			else
+			{
+                Console.WriteLine("Не верный пароль");
+            }
+		}
+
+		do
+		{
+            Console.Write("Введите пароль - ");
+            input = Console.ReadLine();
+
+            if (input != password)
+            {
+				Console.WriteLine("Доступ запрещен");
+            }
+			
+
+        } while (input != password);
+        Console.WriteLine("Доступ разрешен");
     }
 }
