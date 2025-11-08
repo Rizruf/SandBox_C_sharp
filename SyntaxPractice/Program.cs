@@ -29,14 +29,10 @@
             Type_variables.StringTextDaysWorkAgeCategory(); 
             Type_variables.TriangleEstimationQuadraticEquation();
             Type_variables.HoursLoginPasswordSwitchFalling();
-<<<<<<< HEAD
             Type_variables.SimbolsMaxBalanceGroupSwich(); 
             Type_variables.Coffee2NullVowelOrAConsonantTaxCalculate();*/
             Type_variables.ForSumNumberDoWhile();
-=======
-            Type_variables.SimbolsMaxBalanceGroupSwich(); */
-            Type_variables.Coffee2NullVowelOrAConsonantTaxCalculate();
->>>>>>> 28e538a63e44bb1619080b8d4002de2c5fcf4f6a
+
         }
     }
 }
