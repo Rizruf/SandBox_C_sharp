@@ -827,7 +827,11 @@ public static class Type_variables
 
 
 			default:
+<<<<<<< HEAD
 				Console.WriteLine("Вы ввели что-то не то");
+=======
+				Console.WriteLine("Вы ввели что-то не то";
+>>>>>>> 28e538a63e44bb1619080b8d4002de2c5fcf4f6a
 				break;
         }
 
@@ -853,6 +857,7 @@ public static class Type_variables
             
             Console.WriteLine("Налог 15%");
         }
+<<<<<<< HEAD
     }
 	public static void ForSumNumberDoWhile()
 	{
@@ -970,5 +975,9 @@ public static class Type_variables
 
         } while (input != password);
         Console.WriteLine("Доступ разрешен");
+=======
+
+
+>>>>>>> 28e538a63e44bb1619080b8d4002de2c5fcf4f6a
     }
 }
