@@ -31,9 +31,9 @@
             Type_variables.HoursLoginPasswordSwitchFalling();
             Type_variables.SimbolsMaxBalanceGroupSwich(); 
             Type_variables.Coffee2NullVowelOrAConsonantTaxCalculate();
-            Type_variables.ForSumNumberDoWhile();*/
-            Type_variables.MultiplicationDrawingARectangleFactorial();
-
+            Type_variables.ForSumNumberDoWhile();
+            Type_variables.MultiplicationDrawingARectangleFactorial(); */
+            Type_variables.FizzBuzzTheСountdownDegree();
         }
     }
 }

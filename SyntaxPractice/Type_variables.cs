@@ -1015,4 +1015,53 @@ public static class Type_variables
 		}	
 		Console.WriteLine("Факториал числа - " +  factorial + " равен - " + ans);
     }
+
+	public static void FizzBuzzTheСountdownDegree()
+	{
+		Console.WriteLine("FizzBuzz");
+
+		for (int h = 1; h <= 100; h++)
+		{
+			if	(h % 3 == 0 && h % 5 == 0)
+			{
+                Console.Write(" FizzBuzz ");
+            }
+			else if (h % 5 == 0)
+			{
+                Console.Write(" Buzz ");
+            }
+			else if (h % 3 == 0)
+			{
+                Console.Write(" Fizz "); 
+            }
+			else
+			{
+				Console.Write(h + " ");
+            }
+		}
+
+        Console.WriteLine("\nБудем вести обратный отсчет");
+
+		for (int t = 10; t > 0; t--)
+		{
+			Console.Write(t + " ");
+		}
+		Console.WriteLine(" ПУСК!");
+
+		Console.WriteLine("\nУзнаем степень числа без Math.");
+
+		Console.Write("\nВведи число - ");
+		int numberForDeegree = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Введи степень этого числа - ");
+		int Deegree = Convert.ToInt32(Console.ReadLine());
+
+		int ans = 1;
+
+		for (int e = 0; e < Deegree; e++)
+		{
+			ans *= numberForDeegree;
+		}
+		Console.WriteLine(ans);
+    }
 }
