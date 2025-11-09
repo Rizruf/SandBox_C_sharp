@@ -30,8 +30,9 @@
             Type_variables.TriangleEstimationQuadraticEquation();
             Type_variables.HoursLoginPasswordSwitchFalling();
             Type_variables.SimbolsMaxBalanceGroupSwich(); 
-            Type_variables.Coffee2NullVowelOrAConsonantTaxCalculate();*/
-            Type_variables.ForSumNumberDoWhile();
+            Type_variables.Coffee2NullVowelOrAConsonantTaxCalculate();
+            Type_variables.ForSumNumberDoWhile();*/
+            Type_variables.MultiplicationDrawingARectangleFactorial();
 
         }
     }

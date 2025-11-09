@@ -969,9 +969,50 @@ public static class Type_variables
             {
 				Console.WriteLine("Доступ запрещен");
             }
-			
 
         } while (input != password);
         Console.WriteLine("Доступ разрешен");
+    }
+	 public static void MultiplicationDrawingARectangleFactorial()
+	{
+		Console.WriteLine("Таблица умножения");
+		for (int i = 1; i <= 10; i++)
+		{
+			
+			for (int k = 1; k <= 10; k++)
+			{
+				Console.Write($"{(i * k),4}");
+			}
+            Console.WriteLine();
+        }
+
+		Console.WriteLine("Теперь нарисуем прямоугольник маштабируеый");
+
+		Console.Write("Введи высоту прямоугольника - ");
+		int height = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Введи ширину прямоугольника - ");
+        int width = Convert.ToInt32(Console.ReadLine());
+
+		for (int l = 1; l <= height; l++)
+		{
+			for (int m = 1; m <= width; m++)
+			{
+				Console.Write("*"); 
+			}
+			Console.WriteLine();
+		}
+
+		Console.WriteLine("Теперь давай найдем факториал твоего числа");
+
+		Console.Write("Введи число - ");
+		int factorial = Convert.ToInt32(Console.ReadLine());
+		int ans = 1;
+
+		for (int c = 1; c <= factorial; c++)
+		{
+			ans *= c;
+		}	
+		Console.WriteLine("Факториал числа - " +  factorial + " равен - " + ans);
     }
 }
