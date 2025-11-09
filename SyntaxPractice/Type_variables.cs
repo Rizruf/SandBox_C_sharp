@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualBasic;
 using System;
+using System.IO.Pipelines;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 
@@ -1063,5 +1064,25 @@ public static class Type_variables
 			ans *= numberForDeegree;
 		}
 		Console.WriteLine(ans);
+    }
+
+	public static void FibonacciPrimeNumberEcho()
+	{
+		//0 1 1 2 3 4 5 6;
+
+		Console.WriteLine("Числа фибоначи до ограничения");
+
+        Console.Write("Введи ограничение выводы чисел фибоначи - ");
+		int end = Convert.ToInt32(Console.ReadLine());
+
+        int F0 = 0, F1 = 1, nextNum;
+        Console.Write($"{F0} {F1}");
+        for (int q = 2; q < end; q++)
+		{
+            nextNum = F0 + F1;
+			Console.Write(nextNum + " ");
+			F0 = F1;
+			F1 = nextNum;
+        }
     }
 }
