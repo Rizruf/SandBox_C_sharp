@@ -1127,4 +1127,126 @@ public static class Type_variables
 
         }
     }
+	
+	public static void ContinueTriangLeisoscelesTriangle()
+	{
+		Console.WriteLine("Учимся использовать continue");
+		for (int i = 1; i <= 20; i++)
+		{
+			if (i % 2 == 0)
+			{
+				continue;
+			}
+			Console.WriteLine(i);
+		}
+
+		Console.WriteLine("Рисуем треугольники");
+
+		int max = 10;
+
+		for (int p = 0; p <= 10; p++)
+		{
+			for (int l = 0; l < max; l++)
+			{
+				Console.Write("*");
+			}
+
+			max--;
+			Console.WriteLine();
+		}
+
+		int max2 = 2;
+		for (int q = 0; q < 10; q++)
+		{
+			for (int e = 1; e < max2; e++)
+			{
+				Console.Write("*");
+			}
+			max2++;
+			Console.WriteLine();
+		}
+
+		int height = 10;
+		for (int k = 0; k < height; k++)
+		{
+			for (int j = 0; j < k; j++)
+			{
+				Console.Write("*");
+			}
+			Console.WriteLine();
+		}
+
+		Console.WriteLine();
+		int height2 = 10;
+		for (int l = height2; l > 0; l--)
+		{
+			for (int c = 0; c < l; c++)
+			{
+				Console.Write("*");
+			}
+			Console.WriteLine();
+		}
+
+		int height3 = 10;
+		int steps = 10;
+
+		for (int down = 0; down < height3; down++)
+		{
+            for (int stets = 0; stets < steps; stets++)
+            {
+                Console.Write(" ");
+            }
+            for (int stars = 0; stars < down; stars++)
+			{
+                Console.Write(" ");
+            }
+            for (int stars = 0; stars < down-1; stars++)
+            {
+                Console.Write("*");
+            }
+            Console.WriteLine();
+            steps--;
+        }
+
+       
+
+        int height4 = 10;
+        int steps2 = 10;
+
+        for (int down = 0; down < height4; down++)
+        {
+            for (int stets2 = 0; stets2 < steps2; stets2++)
+            {
+                Console.Write(" ");
+            }
+            for (int stars = 0; stars < 2*down-1; stars++)
+            {
+                Console.Write("*");
+            }
+            Console.WriteLine();
+            
+            steps2--;
+        }
+
+        int height5 = 10;
+        int steps3 = 10;
+
+        for (int down = 0; down < height5; down++)
+        {
+            for (int stets3 = 0; stets3 < steps3; stets3++)
+            {
+                Console.Write(" ");
+            }
+            for (int stars = 0; stars < down; stars++)
+            {
+                Console.Write("*");
+            }
+            for (int stars = 0; stars < down - 1; stars++)
+            {
+                Console.Write(" ");
+            }
+            Console.WriteLine();
+            steps3--;
+        }
+    }
 }
