@@ -1070,19 +1070,20 @@ public static class Type_variables
 	{
 		//0 1 1 2 3 4 5 6;
 
-		Console.WriteLine("Числа фибоначи до ограничения");
+		Console.WriteLine("Выведим числа фибоначи");
 
-        Console.Write("Введи ограничение выводы чисел фибоначи - ");
-		int end = Convert.ToInt32(Console.ReadLine());
+		int num1 = 0, num2 = 1, max = 15, newNum ; //можно сделать ограничение вводом с клавиатуры.
 
-        int F0 = 0, F1 = 1, nextNum;
-        Console.Write($"{F0} {F1}");
-        for (int q = 2; q < end; q++)
+		Console.Write($"{num1} {num2}");
+
+		for (int q = 1; q < max; q++)
 		{
-            nextNum = F0 + F1;
-			Console.Write(nextNum + " ");
-			F0 = F1;
-			F1 = nextNum;
-        }
+			newNum = num1 + num2;
+
+			num1 = num2;
+			num2 = newNum;
+
+			Console.Write(" " + $"{newNum}");
+		}
     }
 }
