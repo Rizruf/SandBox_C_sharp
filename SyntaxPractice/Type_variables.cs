@@ -1085,5 +1085,46 @@ public static class Type_variables
 
 			Console.Write(" " + $"{newNum}");
 		}
+
+		Console.WriteLine("\nПроверим ваше число, простое ли оно");
+
+		Console.Write("\nВведите целое число - ");
+		int inputNum = Convert.ToInt32(Console.ReadLine());
+		int separate = 0;
+
+		for (int i = 1; i <= inputNum; i++)
+		{
+			if (inputNum % i == 0)
+			{
+				separate++;
+			}
+		}
+		if (separate == 2)
+		{
+			Console.WriteLine("Число простое");
+		}
+		else
+		{
+            Console.WriteLine("Число не простое");
+        }
+
+
+		Console.WriteLine("\nТеперь напишем программу эхо");
+
+		Console.WriteLine("Будешь вводить что угодно и она будет отвечать тем же, стоп слово exit\n");
+		
+		while (true)
+		{
+			string text = Console.ReadLine();
+			if (text.ToLower() == "exit")
+			{
+				break;
+			}
+			else
+			{
+				Console.WriteLine(text);
+			}
+
+        }
     }
 }
