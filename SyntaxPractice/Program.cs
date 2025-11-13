@@ -34,8 +34,9 @@
             Type_variables.ForSumNumberDoWhile();
             Type_variables.MultiplicationDrawingARectangleFactorial();
             Type_variables.FizzBuzzTheСountdownDegree(); 
-            Type_variables.FibonacciPrimeNumberEcho();*/
-            Type_variables.ContinueTriangLeisoscelesTriangle();
+            Type_variables.FibonacciPrimeNumberEcho();
+            Type_variables.ContinueTriangLeisoscelesTriangle(); */
+            Type_variables.SumReverseTextBullsAndCowsVowels();
         }
     }
 }
