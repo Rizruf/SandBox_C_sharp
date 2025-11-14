@@ -1462,6 +1462,46 @@ public static class Type_variables
 	}
 	public static void Rhomb()
 	{
-		
+		int steptop = 10;
+
+		for (int down = 0; down <= 10; down++)
+		{
+			for (int space = 0; space < steptop; space++)
+			{
+				Console.Write(" ");
+            }
+			for (int starsLeft = 0; starsLeft < down; starsLeft++)
+			{
+                Console.Write("*");
+            }
+			for(int starsRight = 0; starsRight < down - 1; starsRight++)
+			{
+                Console.Write("*");
+            }
+			steptop--;
+            Console.WriteLine();
+        }
+
+		int stepunder = 1;
+		int stars = 10;
+		for (int down = 0; down < 10; down++)
+		{
+			for (int space = 0; space <= stepunder - 2; space++)
+			{
+				Console.Write(" ");
+            }
+			for (int starsLeft = stars; starsLeft > 0; starsLeft--)
+			{
+                Console.Write("*");
+            }
+			for (int starsRight = stars - 1; starsRight > 0; starsRight--)
+			{
+                Console.Write("*");
+            }
+			stepunder++;
+			stars--;
+            Console.WriteLine("");
+        }
+	
     }
 }
