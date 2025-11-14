@@ -35,8 +35,11 @@
             Type_variables.MultiplicationDrawingARectangleFactorial();
             Type_variables.FizzBuzzTheСountdownDegree(); 
             Type_variables.FibonacciPrimeNumberEcho();
-            Type_variables.ContinueTriangLeisoscelesTriangle(); */
+            Type_variables.ContinueTriangLeisoscelesTriangle(); 
             Type_variables.SumReverseTextBullsAndCowsVowels();
+            Type_variables.DoubleFactorialArithmeticMeanGreatest();
+            Type_variables.CommonDivisor(); */
+            Type_variables.Rhomb();
         }
     }
 }

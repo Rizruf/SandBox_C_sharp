@@ -44,38 +44,38 @@ public static class Type_variables
 		Console.WriteLine(little_num + " - " + "Вторая переменная это short принимает в себя тоже самое что и int но урезана больше по границам числа которое может принять int");
 		Console.WriteLine(micro_num + " - " + "Третья переменная это byte принимает в себя тоже самое что и short но урезана больше по границам числа которое может принять short");
 		Console.WriteLine(macro_num + " - " + "Четвертая переменная это sbyte принимает в себя тоже самое что и byte но урезана больше по границам числа которое может принять byte");
-		Console.WriteLine(bigest_num + " - " + "Пятая переменная это long принимает в себя тоже самое что и int это самая большая величина в целочисленных переменных"); 
+		Console.WriteLine(bigest_num + " - " + "Пятая переменная это long принимает в себя тоже самое что и int это самая большая величина в целочисленных переменных");
 
 		Console.WriteLine(a + " - " + "Принимает в себя любой символ Char");
 		Console.WriteLine(text + " - " + "Преобразует любые данные в строковой формат String");
 
-        Console.WriteLine(dot_num + " - " + "Принимает в себя значения с плавающей точкой Float");
-        Console.WriteLine(c + " - " + "Принимает в себя значение с плавающей точкой но ограничена больше чем double");
+		Console.WriteLine(dot_num + " - " + "Принимает в себя значения с плавающей точкой Float");
+		Console.WriteLine(c + " - " + "Принимает в себя значение с плавающей точкой но ограничена больше чем double");
 
-        Console.WriteLine(money + " - " + "Принимает в себя точные значения удобна для подсчета денег decimal");
-    }
+		Console.WriteLine(money + " - " + "Принимает в себя точные значения удобна для подсчета денег decimal");
+	}
 
-    public static void StructFloatAndOperation()
-    {
+	public static void StructFloatAndOperation()
+	{
 		Console.WriteLine("Введите дробное число 1 для выполнения операция над ним");
 		float InputNum1 = float.Parse(Console.ReadLine());
 
-        Console.WriteLine("Введите дробное число 2 для выполнения операция над ним");
-        float InputNum2 = float.Parse(Console.ReadLine());
+		Console.WriteLine("Введите дробное число 2 для выполнения операция над ним");
+		float InputNum2 = float.Parse(Console.ReadLine());
 
 		Console.WriteLine();
 
-        Console.WriteLine("При умножении друг на друга, числа дают " + " " + (InputNum1 * InputNum2));
-        Console.WriteLine("При делении друг на друга, числа дают " + " " + (InputNum1 / InputNum2));
-        Console.WriteLine("При разности друг на друга, числа дают " + " " + (InputNum1 - InputNum2));
-        Console.WriteLine("При сумме друг на друга, числа дают " + " " + (InputNum1 + InputNum2));
-    }
+		Console.WriteLine("При умножении друг на друга, числа дают " + " " + (InputNum1 * InputNum2));
+		Console.WriteLine("При делении друг на друга, числа дают " + " " + (InputNum1 / InputNum2));
+		Console.WriteLine("При разности друг на друга, числа дают " + " " + (InputNum1 - InputNum2));
+		Console.WriteLine("При сумме друг на друга, числа дают " + " " + (InputNum1 + InputNum2));
+	}
 	public static void ConvertStringAndAgePerson()
 	{
 		Console.WriteLine("Введите число которое соотвествует вашим годам жизни");
-		int Age = Convert.ToInt32 (Console.ReadLine());
+		int Age = Convert.ToInt32(Console.ReadLine());
 
-		Console.WriteLine("В следующем году вам будет - " +  (++Age));
+		Console.WriteLine("В следующем году вам будет - " + (++Age));
 	}
 
 	public static void CalculeteSCircle()
@@ -97,39 +97,39 @@ public static class Type_variables
 		{
 			Console.WriteLine("Число четное вариант 1");
 		}
-        else
-        {
+		else
+		{
 			Console.WriteLine("Число не четное вариант 1");
-        }
+		}
 
 		bool value = number % 2 == 0;
 
 		if (value)
 		{
-            Console.WriteLine("Число четное вариант 2");
-        }
+			Console.WriteLine("Число четное вариант 2");
+		}
 		else
 		{
-            Console.WriteLine("Число не четное вариант 2");
-        }
+			Console.WriteLine("Число не четное вариант 2");
+		}
 
 		string resault = number % 2 == 0 ? "Чет" : "Нечет";
 		Console.WriteLine(resault + " вариант 3");
-    }
+	}
 
 	public static void InfoObPerson()
 	{
 		Console.Write("Введите введите свое имя - ");
 		string name = Console.ReadLine();
 
-        Console.Write("Введите свою фамилию - ");
-        string secondName = Console.ReadLine();
+		Console.Write("Введите свою фамилию - ");
+		string secondName = Console.ReadLine();
 
-        Console.Write("Введите ввеите город в котором вы проживаете - ");
-        string city = Console.ReadLine();
+		Console.Write("Введите ввеите город в котором вы проживаете - ");
+		string city = Console.ReadLine();
 
 		Console.WriteLine("Вы проживаете в городе - " + city + " вас зовут - " + name + " " + secondName);
-    }
+	}
 
 	public static void CalculetIMT()
 	{
@@ -139,15 +139,15 @@ public static class Type_variables
 		double weight = Convert.ToDouble(Console.ReadLine());
 
 		Console.Write("Ваш рост в см - ");
-        double height = Convert.ToDouble(Console.ReadLine());
+		double height = Convert.ToDouble(Console.ReadLine());
 		height = height / 100;
 
 		Console.WriteLine("Ваш ИМТ - " + (weight / Math.Pow(height, 2)));
-    }
+	}
 
 	public static void ExchangeOfValues()
 	{
-		int a = 10,b = 20, c = 0;
+		int a = 10, b = 20, c = 0;
 
 		Console.WriteLine("Изначальнае значения " + a + " и " + b);
 
@@ -169,51 +169,51 @@ public static class Type_variables
 	public static void CalculeteColories()
 	{
 
-        Console.Write("Введите колличество белков - ");
+		Console.Write("Введите колличество белков - ");
 		double proteins = Convert.ToDouble(Console.ReadLine());
-        Console.Write("Введите колличество жиров - ");
-        double fats = Convert.ToDouble(Console.ReadLine());
-        Console.Write("Введите колличество угливодов - ");
-        double carbohydrates = Convert.ToDouble(Console.ReadLine());
+		Console.Write("Введите колличество жиров - ");
+		double fats = Convert.ToDouble(Console.ReadLine());
+		Console.Write("Введите колличество угливодов - ");
+		double carbohydrates = Convert.ToDouble(Console.ReadLine());
 
 		Console.WriteLine("Калорийность - " + (((proteins + carbohydrates) * 4) + fats * 9));
-    }
+	}
 
 	public static void CurrencyTransfer()
 	{
 		const decimal coursRub = 0.012363m;
 
-        Console.Write("Введите сумму в рублях для перевода в доллары - ");
+		Console.Write("Введите сумму в рублях для перевода в доллары - ");
 		decimal rubles = Convert.ToDecimal(Console.ReadLine());
 
 		decimal dollars = rubles * coursRub;
 		Console.WriteLine("После конвертации, ваша сумма в долларах составила - " + dollars);
-    }
+	}
 
 	public static void HoursMinutes()
 	{
-		Console.Write("Введите колличество минут - "); 
+		Console.Write("Введите колличество минут - ");
 		int allMinutes = Convert.ToInt32(Console.ReadLine());
 
 		int hours = allMinutes / 60;
 		int minutes = allMinutes % 60;
 
-		Console.WriteLine("Ваши минуты соответствуют - " + hours + " часам " + minutes + " минутам."); 
+		Console.WriteLine("Ваши минуты соответствуют - " + hours + " часам " + minutes + " минутам.");
 	}
 
 	public static void Counter()
 	{
 		Console.Write("Введите любое целое число - ");
 		int num = Convert.ToInt32(Console.ReadLine());
-		
+
 		Console.WriteLine("Прибавим к числу 1 через инкремент (префиксный) который сначала прибавляется, а потом записывается - " + ++num);
 		Console.WriteLine("Прибавим к числу 1 через инкремент (постфиксный) который сначала получает в переменную число,\n а потом уже прибавляется - " + num++);
-        Console.WriteLine("\nОтнимим от числа 1 аналогично с декрементом (постфиксным) - " + num--);
-        Console.WriteLine("Отнимим от числа 1 аналогично с декрементом (префиксным) - " + --num);
+		Console.WriteLine("\nОтнимим от числа 1 аналогично с декрементом (постфиксным) - " + num--);
+		Console.WriteLine("Отнимим от числа 1 аналогично с декрементом (префиксным) - " + --num);
 
 		Console.WriteLine("\n\nОтметим что после прибавления или отнимания, число всегда становится новым т.е меняется сама переменная,\n а так же постфиксный декремент и инкремент, при дейтвии над переменной учитывают только на следующем шаге свое значение.");
 
-    }
+	}
 
 	public static void CompoundAssignmentAndChar()
 	{
@@ -235,23 +235,23 @@ public static class Type_variables
 
 		Console.Write($"{letter1} {letter2} {letter3}");
 
-    }
+	}
 
 	public static void DateAndLogicalOperators()
 	{
 		DateTime rightNow = DateTime.Now;
 		string formatToData = rightNow.ToString("dd.MM.yyyy");
 
-		Console.WriteLine("Сегодняшняя дата в формате ДД.ММ.ГГГГ - " +  formatToData + "\n");
+		Console.WriteLine("Сегодняшняя дата в формате ДД.ММ.ГГГГ - " + formatToData + "\n");
 
 		Console.WriteLine("Логические операции: && - сокращенное И, \n|| - сокращенное ИЛИ, \n! - НЕ,  \n& - не сокращенное И, \n| - не сокращенное ИЛИ");
 
 		Console.WriteLine("\nЛогические опрераторы делают тоже самое что и в логической математике. По расшифровке все понятно." +
-                            "\nОтличие сокращенных (&&, ||) от несокращенных (&, |) операторов в том, что сокращенные не всегда вычисляют правую часть выражения." +
-                            "\nА несокращенные (&, |) операторы всегда вычисляют обе части выражения, независимо от результата левой части.\"");
+							"\nОтличие сокращенных (&&, ||) от несокращенных (&, |) операторов в том, что сокращенные не всегда вычисляют правую часть выражения." +
+							"\nА несокращенные (&, |) операторы всегда вычисляют обе части выражения, независимо от результата левой части.\"");
 
 	}
-	
+
 	public static void STriangleTemperature()
 	{
 		Console.Write("Введите основание вашего треугольник - ");
@@ -267,11 +267,11 @@ public static class Type_variables
 		Console.Write("\n\nТеперь введите температуру в цельсиях - ");
 		double Celsius = Convert.ToDouble(Console.ReadLine());
 
-		double FTemperature = Celsius*9.0/5+32;
+		double FTemperature = Celsius * 9.0 / 5 + 32;
 
 		Console.Write("Ваша температура по фаренгейтам равна - " + FTemperature);
 	}
-	
+
 	public static void CostAndDiscountAlsoLong()
 	{
 		//x 100
@@ -292,16 +292,16 @@ public static class Type_variables
 
 		long tenMilliards = Convert.ToInt64(Math.Pow(10, 10));
 
-		Console.WriteLine($"{tenMilliards} {(tenMilliards-(Math.Pow(10,2)))}");
+		Console.WriteLine($"{tenMilliards} {(tenMilliards - (Math.Pow(10, 2)))}");
 	}
 
 	public static void WayToFileAndVerbatum()
 	{
-        Console.WriteLine("Путь к файлу: \"C:\\Program Files\\MyApp\"");
+		Console.WriteLine("Путь к файлу: \"C:\\Program Files\\MyApp\"");
 
 		Console.WriteLine(@"""C:\Program Files\MyApp"".");
 
-    }
+	}
 
 	public static void ObjectAndValues()
 	{
@@ -319,15 +319,15 @@ public static class Type_variables
 		}
 		else
 		{
-            Console.WriteLine("Наш obj является не числом и не строкой");
-        }
+			Console.WriteLine("Наш obj является не числом и не строкой");
+		}
 
 		Console.WriteLine(@"""С\Programm Files\drone\next.exe"""); //Отработка вербатум и экранирование для запоминания.
 		Console.WriteLine("C\\Program Files\\drone\\next.exe");
 
 
 		Console.WriteLine($"{default(int)} {default(bool)} {default(string)} {default(long)} {default(decimal)} {default(short)}");
-		
+
 		DateTime rightNow = DateTime.Now;
 		string dateTimeFormat = rightNow.ToString("dd.MM.yyyy"); //повторение вывода сегодняшней даты в определенном формате.
 
@@ -341,26 +341,26 @@ public static class Type_variables
 
 		if (num % 2 == 0)
 		{
-            if (num < 0)
-            {
-                Console.WriteLine("Число четное, но отрицательное");
-            }
-            else
-            {
-                Console.WriteLine("Число четное, но положительное");
-            }
-        }
+			if (num < 0)
+			{
+				Console.WriteLine("Число четное, но отрицательное");
+			}
+			else
+			{
+				Console.WriteLine("Число четное, но положительное");
+			}
+		}
 		else
 		{
-            if (num < 0)
-            {
-                Console.WriteLine("Число не четное, но отрицательное");
-            }
-            else
-            {
-                Console.WriteLine("Число не четное, но положительное");
-            }
-        }
+			if (num < 0)
+			{
+				Console.WriteLine("Число не четное, но отрицательное");
+			}
+			else
+			{
+				Console.WriteLine("Число не четное, но положительное");
+			}
+		}
 
 		if (num % 2 == 0 && num < 0)
 		{
@@ -379,22 +379,22 @@ public static class Type_variables
 			Console.Write("Введите целое число которое хотите - ");
 		int numberToRange = Convert.ToInt32(Console.ReadLine());
 
-        Console.Write("Укажите начальное число для диапазона - ");
-        int rangeForNumber = Convert.ToInt32(Console.ReadLine());
+		Console.Write("Укажите начальное число для диапазона - ");
+		int rangeForNumber = Convert.ToInt32(Console.ReadLine());
 
-        Console.Write("Укажите конечное число для диапазона - ");
-        int rangeForNumberEnd = Convert.ToInt32(Console.ReadLine());
+		Console.Write("Укажите конечное число для диапазона - ");
+		int rangeForNumberEnd = Convert.ToInt32(Console.ReadLine());
 
-        bool ans = numberToRange <= rangeForNumberEnd && numberToRange>= rangeForNumber;
+		bool ans = numberToRange <= rangeForNumberEnd && numberToRange >= rangeForNumber;
 
 		switch (ans)
 		{
 			case true:
-                Console.Write("Ваше число входит в диапазон");
-                break;
+				Console.Write("Ваше число входит в диапазон");
+				break;
 			case false:
-                Console.Write("Ваше число не входит в диапазон");
-                break;
+				Console.Write("Ваше число не входит в диапазон");
+				break;
 			default:
 				Console.WriteLine("Вы ввели не число");
 				break;
@@ -402,12 +402,12 @@ public static class Type_variables
 
 		if (numberToRange <= rangeForNumberEnd && numberToRange >= rangeForNumber)
 		{
-            Console.WriteLine("\nВаше число входит в диапазон");
-        }
+			Console.WriteLine("\nВаше число входит в диапазон");
+		}
 		else
 		{
-            Console.WriteLine("\nВаше число не входит в диапазон");
-        }
+			Console.WriteLine("\nВаше число не входит в диапазон");
+		}
 	}
 
 	public static void CalculatorLeapYearAndTernaryOper()
@@ -433,115 +433,115 @@ public static class Type_variables
 		Console.Write("\nА теперь давайте определим высокосный ли год, введите год который хотите - ");
 		int year = Convert.ToInt32(Console.ReadLine());
 
-        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
-        {
-            Console.WriteLine("Год высокосный");
-        }
-        else
-        {
-            Console.WriteLine("Год не высокосный");
-        }
+		if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
+		{
+			Console.WriteLine("Год высокосный");
+		}
+		else
+		{
+			Console.WriteLine("Год не высокосный");
+		}
 
-		Console.WriteLine ("Вернусь к задаче 5 и напишу ее через тернарный оператор напиши мне целое число - ");
+		Console.WriteLine("Вернусь к задаче 5 и напишу ее через тернарный оператор напиши мне целое число - ");
 		int num = Convert.ToInt32(Console.ReadLine());
 
 		string newans = num % 2 == 0 ? "четное" : "нечетное";
 
-        Console.WriteLine(newans);
-    }
+		Console.WriteLine(newans);
+	}
 
 	public static void DaysDrinksLoginAndPassword()
 	{
-        Console.Write("Введите номер дня недели чтобы мы поняли что это за день - ");
+		Console.Write("Введите номер дня недели чтобы мы поняли что это за день - ");
 		int day = Convert.ToInt32(Console.ReadLine());
 
 		switch (day)
 		{
 			case 1:
-                Console.WriteLine("Понедельник");
-                break;
-            case 2:
-                Console.WriteLine("Вторник");
-                break;
-            case 3:
-                Console.WriteLine("Среда");
-                break;
-            case 4:
-                Console.WriteLine("Четверг");
-                break;
-            case 5:
-                Console.WriteLine("Пятница");
-                break;
-            case 6:
-                Console.WriteLine("Суббота");
-                break;
-            case 7:
-                Console.WriteLine("Воскресенье");
-                break;
-			default:
-                Console.WriteLine("Вы ввели не номер дня недели");
+				Console.WriteLine("Понедельник");
 				break;
-        }
+			case 2:
+				Console.WriteLine("Вторник");
+				break;
+			case 3:
+				Console.WriteLine("Среда");
+				break;
+			case 4:
+				Console.WriteLine("Четверг");
+				break;
+			case 5:
+				Console.WriteLine("Пятница");
+				break;
+			case 6:
+				Console.WriteLine("Суббота");
+				break;
+			case 7:
+				Console.WriteLine("Воскресенье");
+				break;
+			default:
+				Console.WriteLine("Вы ввели не номер дня недели");
+				break;
+		}
 
 		Console.WriteLine("Вижу вы хотите выпиить у нас есть 1 - кофе, 2 - чай, 3 - сок, 4 - коктейль\n");
 		int numDrinks = Convert.ToInt32(Console.ReadLine());
 
 		switch (numDrinks)
 		{
-            case 1:
-                Console.WriteLine("Вы выбрали кофе - его стоимость 250 рублей");
-                break;
-            case 2:
-                Console.WriteLine("Вы выбрали чай - его стоимость 350 рублей");
-                break;
-            case 3:
-                Console.WriteLine("Вы выбрали сок - его стоимость 450 рублей");
-                break;
-            case 4:
-                Console.WriteLine("Вы выбрали коктейль - его стоимость 550 рублей");
-                break;
+			case 1:
+				Console.WriteLine("Вы выбрали кофе - его стоимость 250 рублей");
+				break;
+			case 2:
+				Console.WriteLine("Вы выбрали чай - его стоимость 350 рублей");
+				break;
+			case 3:
+				Console.WriteLine("Вы выбрали сок - его стоимость 450 рублей");
+				break;
+			case 4:
+				Console.WriteLine("Вы выбрали коктейль - его стоимость 550 рублей");
+				break;
 			default:
-                Console.WriteLine("Сожалееем такого напитка нет в меню!");
-                break;
+				Console.WriteLine("Сожалееем такого напитка нет в меню!");
+				break;
 
-        }
+		}
 
 		Console.WriteLine("Введите пароль и логин для входа в систему лояльности отеля");
-        Console.Write("\nЛогин: ");
+		Console.Write("\nЛогин: ");
 		string loginPers = Console.ReadLine();
-        Console.Write("Пароль: ");
-        string passwordPers = Console.ReadLine();
+		Console.Write("Пароль: ");
+		string passwordPers = Console.ReadLine();
 
 		const string login = "HelloWorld";
 		const string password = "1";
 
 		if (loginPers == login && passwordPers == password)
 		{
-            Console.Write("Спасибо что выбрали нас - Доступ разрешен!");
-        }
+			Console.Write("Спасибо что выбрали нас - Доступ разрешен!");
+		}
 		else Console.Write("Ошибка - Доступ заблокирован!\n");
 
-    }
+	}
 
-	public static void StringTextDaysWorkAgeCategory ()
+	public static void StringTextDaysWorkAgeCategory()
 	{
 		Console.WriteLine("Введите 2 имени и мы проверим их на совпадение");
-        Console.Write("\nВведите 1 имя");
-        string name1 = Console.ReadLine();
+		Console.Write("\nВведите 1 имя");
+		string name1 = Console.ReadLine();
 
-        Console.Write("\nВведите 2 имя");
-        string name2 = Console.ReadLine();
+		Console.Write("\nВведите 2 имя");
+		string name2 = Console.ReadLine();
 
 		if (name1.ToLower() == name2.ToLower())
 		{
 			Console.WriteLine("браво имена одинаковые");
 		}
-        else Console.WriteLine("имена разные");
+		else Console.WriteLine("имена разные");
 
 		if (name1.Equals(name2, StringComparison.OrdinalIgnoreCase)) // сложное какое-то для новичка.
 		{
-            Console.WriteLine("браво имена одинаковые");
-        }
+			Console.WriteLine("браво имена одинаковые");
+		}
 		else Console.WriteLine("имена разные");
 
 
@@ -549,18 +549,18 @@ public static class Type_variables
 		int age = Convert.ToInt32(Console.ReadLine());
 
 		if (age > 0 && age <= 12) Console.WriteLine("Вы подросток");
-        else if (age >= 18 && age <= 59) Console.WriteLine("Вы взрослый");
-        else if (age > 59) Console.WriteLine("Вы состарились");
+		else if (age >= 18 && age <= 59) Console.WriteLine("Вы взрослый");
+		else if (age > 59) Console.WriteLine("Вы состарились");
 
 
-        Console.WriteLine("Введите номер дня недели - ");
+		Console.WriteLine("Введите номер дня недели - ");
 		int day = Convert.ToInt32(Console.ReadLine());
 
 		if (day <= 5 && day > 0) Console.WriteLine("Рабочий день");
 		else if (day > 5 && day <= 7) Console.WriteLine("Не рабочий день");
 		else Console.WriteLine("Чет вы не то ввели");
 
-    }
+	}
 
 	public static void TriangleEstimationQuadraticEquation()
 	{
@@ -605,7 +605,7 @@ public static class Type_variables
 		else if (score <= 100) Console.WriteLine("A");
 		else Console.WriteLine("Такого значения не существуюет");
 
-    }
+	}
 
 	public static void HoursLoginPasswordSwitchFalling()
 	{
@@ -615,42 +615,42 @@ public static class Type_variables
 
 		if (login == loginPerson)
 		{
-            const string password = "Pass";
-            Console.Write("Введите пароль:");
+			const string password = "Pass";
+			Console.Write("Введите пароль:");
 			string passwordPerson = Console.ReadLine();
 			if (password == passwordPerson)
 			{
-                Console.WriteLine("Доступ открыт.");
-                Console.WriteLine("Теперь вы можете посмотреть по формату 24 часа, какая сейчас часть дня.");
+				Console.WriteLine("Доступ открыт.");
+				Console.WriteLine("Теперь вы можете посмотреть по формату 24 часа, какая сейчас часть дня.");
 
 				Console.Write("\nВведите число от 0 до 23 чтобы узнать какая сейчас часть дня - ");
 				int time = Convert.ToInt32(Console.ReadLine());
 
-                if (time >= 5 && time <= 11) 
-                {
-                    Console.WriteLine("Сейчас утро");
-                }
-                else if (time >= 12 && time <= 17) 
-                {
-                    Console.WriteLine("Сейчас день");
-                }
-                else if (time >= 18 && time <= 23) 
-                {
-                    Console.WriteLine("Сейчас вечер");
-                }
-                else if (time >= 0 && time <= 4)
-                {
-                    Console.WriteLine("Сейчас ночь");
-                }
-                else 
-                {
-                    Console.WriteLine("Неверное время");
-                }
+				if (time >= 5 && time <= 11)
+				{
+					Console.WriteLine("Сейчас утро");
+				}
+				else if (time >= 12 && time <= 17)
+				{
+					Console.WriteLine("Сейчас день");
+				}
+				else if (time >= 18 && time <= 23)
+				{
+					Console.WriteLine("Сейчас вечер");
+				}
+				else if (time >= 0 && time <= 4)
+				{
+					Console.WriteLine("Сейчас ночь");
+				}
+				else
+				{
+					Console.WriteLine("Неверное время");
+				}
 
-            }
+			}
 			else Console.WriteLine("Доступ запрещен.");
 
-        }
+		}
 		else Console.WriteLine("Доступ запрещен.");
 
 
@@ -662,27 +662,27 @@ public static class Type_variables
 			case 1:
 			case 2:
 			case 3:
-            case 4:
-            case 5:
+			case 4:
+			case 5:
 				Console.WriteLine("Это рабочий день.");
-                break;
+				break;
 			default:
 				Console.WriteLine("Что то не то записали.");
 				break;
-        }
-    }
+		}
+	}
 
 	public static void SimbolsMaxBalanceGroupSwich()
 	{
 		int value1 = 10000;
 		int value2 = 200;
-        int value3 = 3500;
+		int value3 = 3500;
 		int ans = Math.Max(value1, value2);
 		ans = Math.Max(ans, value3);
 
 		double balance = 123342.32;
 
-        Console.WriteLine("Снимите деньгу");
+		Console.WriteLine("Снимите деньгу");
 		int sum = Convert.ToInt32(Console.ReadLine());
 
 		if (sum > 0 && sum <= balance && sum % 100 == 0)
@@ -692,25 +692,25 @@ public static class Type_variables
 		}
 		else
 		{
-            Console.WriteLine("Не хватает средств или что-то пошло не так");
-        }
+			Console.WriteLine("Не хватает средств или что-то пошло не так");
+		}
 
-			Console.WriteLine("Введите символ или одно число от 1 до 9.");
+		Console.WriteLine("Введите символ или одно число от 1 до 9.");
 		char symbol = Convert.ToChar(Console.ReadLine());
 
 		if (char.IsDigit(symbol))
 		{
 			Console.WriteLine("Это число");
 
-        }
+		}
 		else if (char.IsLetter(symbol))
 		{
-            Console.WriteLine("Это символ");
-        }
+			Console.WriteLine("Это символ");
+		}
 		else Console.WriteLine("Что то не то");
 
 
-    }
+	}
 
 	public static void Coffee2NullVowelOrAConsonantTaxCalculate()
 	{
@@ -779,15 +779,15 @@ public static class Type_variables
 			default:
 				Console.WriteLine("Такого напитка нет в меню");
 				break;
-        }
+		}
 
 		Console.WriteLine("Введите ничего или же что-то");
-        string nullOrEmpty = Console.ReadLine();
+		string nullOrEmpty = Console.ReadLine();
 
 		if (string.IsNullOrEmpty(nullOrEmpty))
 		{
-            Console.WriteLine("Вы ввели ничего");
-        }
+			Console.WriteLine("Вы ввели ничего");
+		}
 		else Console.WriteLine("Вы что-то ввели");
 
 		Console.WriteLine("Введите одну букву, а мы скажем глассная она или согласня");
@@ -796,35 +796,35 @@ public static class Type_variables
 		switch (letter.ToUpper())
 		{
 			case "A": //гласные через проваливание
-            case "E":
-            case "I":
-            case "O":
-            case "U":
+			case "E":
+			case "I":
+			case "O":
+			case "U":
 				Console.WriteLine("Ваша буква гласная");
 				break;
 
-            case "B": //согласные через проваливание
-            case "C":
-            case "D":
-            case "F":
-            case "G":
-            case "H":
-            case "J":
-            case "K":
-            case "L":
-            case "N":
-            case "M":
-            case "P":
-            case "Q":
-            case "R":
-            case "S":
-            case "T":
-            case "V":
-            case "W":
-            case "X":
-            case "Y":
-            case "Z":
-                Console.WriteLine("Ваша буква согласная");
+			case "B": //согласные через проваливание
+			case "C":
+			case "D":
+			case "F":
+			case "G":
+			case "H":
+			case "J":
+			case "K":
+			case "L":
+			case "N":
+			case "M":
+			case "P":
+			case "Q":
+			case "R":
+			case "S":
+			case "T":
+			case "V":
+			case "W":
+			case "X":
+			case "Y":
+			case "Z":
+				Console.WriteLine("Ваша буква согласная");
 				break;
 
 			default:
@@ -833,32 +833,32 @@ public static class Type_variables
 				Console.WriteLine("Вы ввели что-то не то");
 
 				break;
-        }
+		}
 
-        Console.Write("Введите ваш доход - ");
-        double cash = Convert.ToDouble(Console.ReadLine());
+		Console.Write("Введите ваш доход - ");
+		double cash = Convert.ToDouble(Console.ReadLine());
 
-        if (cash <= 0)
-        {
-            Console.WriteLine("Доход должен быть положительным.");
-        }
-        else if (cash <= 10000) 
-        {
-            
-            Console.WriteLine("Налог 5%");
-        }
-        else if (cash <= 50000) 
-        {
-            
-            Console.WriteLine("Налог 10%");
-        }
-        else 
-        {
-            
-            Console.WriteLine("Налог 15%");
-        }
+		if (cash <= 0)
+		{
+			Console.WriteLine("Доход должен быть положительным.");
+		}
+		else if (cash <= 10000)
+		{
 
-    }
+			Console.WriteLine("Налог 5%");
+		}
+		else if (cash <= 50000)
+		{
+
+			Console.WriteLine("Налог 10%");
+		}
+		else
+		{
+
+			Console.WriteLine("Налог 15%");
+		}
+
+	}
 	public static void ForSumNumberDoWhile()
 	{
 		Console.WriteLine("Выводим все числа которые делятся на 5 без остатка, ограничение до 100");
@@ -882,7 +882,7 @@ public static class Type_variables
 		Console.WriteLine("Вводи число а мы его суммируем");
 		int value;
 		bool condition = true;
-        int summator = 0;
+		int summator = 0;
 
 
 		while (condition)
@@ -904,20 +904,20 @@ public static class Type_variables
 
 		while (true)
 		{
-            Console.Write("Вводи число - ");
-            value = Convert.ToInt32(Console.ReadLine());
+			Console.Write("Вводи число - ");
+			value = Convert.ToInt32(Console.ReadLine());
 
-            if (value == 0)
+			if (value == 0)
 			{
 				break;
 			}
 			else
 			{
-                summator += value;
-                Console.WriteLine("Добавили число - " + value);
-            }
+				summator += value;
+				Console.WriteLine("Добавили число - " + value);
+			}
 		}
-		
+
 		Console.WriteLine("Поиграем в угадайку");
 		Random rnd = new Random();
 		int numberSecret = rnd.Next(1, 100);
@@ -925,23 +925,23 @@ public static class Type_variables
 
 		while (true)
 		{
-            Console.Write("Вводи число - ");
+			Console.Write("Вводи число - ");
 			number = Convert.ToInt32(Console.ReadLine());
 
 			if (number > numberSecret)
 			{
-                Console.WriteLine("Меньше");
-            }
+				Console.WriteLine("Меньше");
+			}
 			else if (number < numberSecret)
 			{
-                Console.WriteLine("Больше");
-            }
+				Console.WriteLine("Больше");
+			}
 			else
 			{
-                Console.WriteLine("Угадал! Это число - " + numberSecret);
+				Console.WriteLine("Угадал! Это число - " + numberSecret);
 				break;
-            }
-        }
+			}
+		}
 
 		Console.WriteLine("Будем вводить пароль крутой.");
 		const string password = "AcBd31";
@@ -951,56 +951,56 @@ public static class Type_variables
 		{
 			Console.Write("Введите пароль - ");
 			input = Console.ReadLine();
-			if (input == password) 
+			if (input == password)
 			{
-                Console.WriteLine("Доступ разрешен");
+				Console.WriteLine("Доступ разрешен");
 				break;
-            }
+			}
 			else
 			{
-                Console.WriteLine("Не верный пароль");
-            }
+				Console.WriteLine("Не верный пароль");
+			}
 		}
 
 		do
 		{
-            Console.Write("Введите пароль - ");
-            input = Console.ReadLine();
+			Console.Write("Введите пароль - ");
+			input = Console.ReadLine();
 
-            if (input != password)
-            {
+			if (input != password)
+			{
 				Console.WriteLine("Доступ запрещен");
-            }
+			}
 
-        } while (input != password);
-        Console.WriteLine("Доступ разрешен");
-    }
-	 public static void MultiplicationDrawingARectangleFactorial()
+		} while (input != password);
+		Console.WriteLine("Доступ разрешен");
+	}
+	public static void MultiplicationDrawingARectangleFactorial()
 	{
 		Console.WriteLine("Таблица умножения");
 		for (int i = 1; i <= 10; i++)
 		{
-			
+
 			for (int k = 1; k <= 10; k++)
 			{
 				Console.Write($"{(i * k),4}");
 			}
-            Console.WriteLine();
-        }
+			Console.WriteLine();
+		}
 
 		Console.WriteLine("Теперь нарисуем прямоугольник маштабируеый");
 
 		Console.Write("Введи высоту прямоугольника - ");
 		int height = Convert.ToInt32(Console.ReadLine());
 
-        Console.Write("Введи ширину прямоугольника - ");
-        int width = Convert.ToInt32(Console.ReadLine());
+		Console.Write("Введи ширину прямоугольника - ");
+		int width = Convert.ToInt32(Console.ReadLine());
 
 		for (int l = 1; l <= height; l++)
 		{
 			for (int m = 1; m <= width; m++)
 			{
-				Console.Write("*"); 
+				Console.Write("*");
 			}
 			Console.WriteLine();
 		}
@@ -1014,9 +1014,9 @@ public static class Type_variables
 		for (int c = 1; c <= factorial; c++)
 		{
 			ans *= c;
-		}	
-		Console.WriteLine("Факториал числа - " +  factorial + " равен - " + ans);
-    }
+		}
+		Console.WriteLine("Факториал числа - " + factorial + " равен - " + ans);
+	}
 
 	public static void FizzBuzzTheСountdownDegree()
 	{
@@ -1024,25 +1024,25 @@ public static class Type_variables
 
 		for (int h = 1; h <= 100; h++)
 		{
-			if	(h % 3 == 0 && h % 5 == 0)
+			if (h % 3 == 0 && h % 5 == 0)
 			{
-                Console.Write(" FizzBuzz ");
-            }
+				Console.Write(" FizzBuzz ");
+			}
 			else if (h % 5 == 0)
 			{
-                Console.Write(" Buzz ");
-            }
+				Console.Write(" Buzz ");
+			}
 			else if (h % 3 == 0)
 			{
-                Console.Write(" Fizz "); 
-            }
+				Console.Write(" Fizz ");
+			}
 			else
 			{
 				Console.Write(h + " ");
-            }
+			}
 		}
 
-        Console.WriteLine("\nБудем вести обратный отсчет");
+		Console.WriteLine("\nБудем вести обратный отсчет");
 
 		for (int t = 10; t > 0; t--)
 		{
@@ -1055,7 +1055,7 @@ public static class Type_variables
 		Console.Write("\nВведи число - ");
 		int numberForDeegree = Convert.ToInt32(Console.ReadLine());
 
-        Console.Write("Введи степень этого числа - ");
+		Console.Write("Введи степень этого числа - ");
 		int Deegree = Convert.ToInt32(Console.ReadLine());
 
 		int ans = 1;
@@ -1065,7 +1065,7 @@ public static class Type_variables
 			ans *= numberForDeegree;
 		}
 		Console.WriteLine(ans);
-    }
+	}
 
 	public static void FibonacciPrimeNumberEcho()
 	{
@@ -1073,7 +1073,7 @@ public static class Type_variables
 
 		Console.WriteLine("Выведим числа фибоначи");
 
-		int num1 = 0, num2 = 1, max = 15, newNum ; //можно сделать ограничение вводом с клавиатуры.
+		int num1 = 0, num2 = 1, max = 15, newNum; //можно сделать ограничение вводом с клавиатуры.
 
 		Console.Write($"{num1} {num2}");
 
@@ -1106,14 +1106,14 @@ public static class Type_variables
 		}
 		else
 		{
-            Console.WriteLine("Число не простое");
-        }
+			Console.WriteLine("Число не простое");
+		}
 
 
 		Console.WriteLine("\nТеперь напишем программу эхо");
 
 		Console.WriteLine("Будешь вводить что угодно и она будет отвечать тем же, стоп слово exit\n");
-		
+
 		while (true)
 		{
 			string text = Console.ReadLine();
@@ -1126,9 +1126,9 @@ public static class Type_variables
 				Console.WriteLine(text);
 			}
 
-        }
-    }
-	
+		}
+	}
+
 	public static void ContinueTriangLeisoscelesTriangle()
 	{
 		Console.WriteLine("Учимся использовать continue");
@@ -1193,111 +1193,111 @@ public static class Type_variables
 
 		for (int down = 0; down < height3; down++)
 		{
-            for (int stets = 0; stets < steps; stets++)
-            {
-                Console.Write(" ");
-            }
-            for (int stars = 0; stars < down; stars++)
+			for (int stets = 0; stets < steps; stets++)
 			{
-                Console.Write(" ");
-            }
-            for (int stars = 0; stars < down-1; stars++)
-            {
-                Console.Write("*");
-            }
-            Console.WriteLine();
-            steps--;
-        }
-
-       
-
-        int height4 = 10;
-        int steps2 = 10;
-
-        for (int down = 0; down < height4; down++)
-        {
-            for (int stets2 = 0; stets2 < steps2; stets2++)
-            {
-                Console.Write(" ");
-            }
-            for (int stars = 0; stars < 2*down-1; stars++)
-            {
-                Console.Write("*");
-            }
-            Console.WriteLine();
-            
-            steps2--;
-        }
-
-        int height5 = 10;
-        int steps3 = 10;
-
-        for (int down = 0; down < height5; down++)
-        {
-            for (int stets3 = 0; stets3 < steps3; stets3++)
-            {
-                Console.Write(" ");
-            }
-            for (int stars = 0; stars < down; stars++)
-            {
-                Console.Write("*");
-            }
-            for (int stars = 0; stars < down - 1; stars++)
-            {
-                Console.Write(" ");
-            }
-            Console.WriteLine();
-            steps3--;
-
-        }
-    }
-    public static void SumReverseTextBullsAndCowsVowels()
-    {
-		//Console.WriteLine("Введите любой текст, выведем его наоборот");
-		//string text = Console.ReadLine();
+				Console.Write(" ");
+			}
+			for (int stars = 0; stars < down; stars++)
+			{
+				Console.Write(" ");
+			}
+			for (int stars = 0; stars < down - 1; stars++)
+			{
+				Console.Write("*");
+			}
+			Console.WriteLine();
+			steps--;
+		}
 
 
-		//for (int i = text.Length - 1; i >= 0; i--)
-		//{
-		//	Console.Write(text[i]);
-		//}
 
-		//Console.WriteLine("\n\nВведите любое число, посчитаем сумму его цифр");
-		//string numbers = Console.ReadLine();
-		//int sum = 0;
-		//for (int k = 0; k <= numbers.Length - 1; k++)
-		//{
-		//	if (char.IsDigit(numbers[k]))
-		//	{
-		//		sum += Convert.ToInt32(numbers[k].ToString());
-		//		if (k == numbers.Length - 1)
-		//		{
-		//			Console.Write("Ваша сумма - " + sum);
-		//		}
-		//	}
-		//	else
-		//	{
-		//		sum = 0;
-		//		Console.WriteLine("Вы ввели символы которые не являются числом");
-		//		break;
-		//	}
-		//}
+		int height4 = 10;
+		int steps2 = 10;
 
-		//Console.WriteLine("\n\nТеперь посчитаем сколько гласных в том что вы введете");
-		////A, E, I, O, U, Y
-		//Console.Write("Введите любую строку - ");
-		//string boba = Console.ReadLine();
-		//boba = boba.ToUpper();
-		//int vowels = 0;
+		for (int down = 0; down < height4; down++)
+		{
+			for (int stets2 = 0; stets2 < steps2; stets2++)
+			{
+				Console.Write(" ");
+			}
+			for (int stars = 0; stars < 2 * down - 1; stars++)
+			{
+				Console.Write("*");
+			}
+			Console.WriteLine();
 
-		//for (int l = 0; l <= boba.Length - 1; l++)
-		//{
-		//	if (boba[l] == 'A' || boba[l] == 'E' || boba[l] == 'I' || boba[l] == 'O' || boba[l] == 'U' || boba[l] == 'Y')
-		//	{
-		//		vowels++;
-		//	}
-		//}
-		//Console.WriteLine("\nГласных - " + vowels);
+			steps2--;
+		}
+
+		int height5 = 10;
+		int steps3 = 10;
+
+		for (int down = 0; down < height5; down++)
+		{
+			for (int stets3 = 0; stets3 < steps3; stets3++)
+			{
+				Console.Write(" ");
+			}
+			for (int stars = 0; stars < down; stars++)
+			{
+				Console.Write("*");
+			}
+			for (int stars = 0; stars < down - 1; stars++)
+			{
+				Console.Write(" ");
+			}
+			Console.WriteLine();
+			steps3--;
+
+		}
+	}
+	public static void SumReverseTextBullsAndCowsVowels()
+	{
+		Console.WriteLine("Введите любой текст, выведем его наоборот");
+		string text = Console.ReadLine();
+
+
+		for (int i = text.Length - 1; i >= 0; i--)
+		{
+			Console.Write(text[i]);
+		}
+
+		Console.WriteLine("\n\nВведите любое число, посчитаем сумму его цифр");
+		string numbers = Console.ReadLine();
+		int sum = 0;
+		for (int k = 0; k <= numbers.Length - 1; k++)
+		{
+			if (char.IsDigit(numbers[k]))
+			{
+				sum += Convert.ToInt32(numbers[k].ToString());
+				if (k == numbers.Length - 1)
+				{
+					Console.Write("Ваша сумма - " + sum);
+				}
+			}
+			else
+			{
+				sum = 0;
+				Console.WriteLine("Вы ввели символы которые не являются числом");
+				break;
+			}
+		}
+
+		Console.WriteLine("\n\nТеперь посчитаем сколько гласных в том что вы введете");
+		//A, E, I, O, U, Y
+		Console.Write("Введите любую строку - ");
+		string boba = Console.ReadLine();
+		boba = boba.ToUpper();
+		int vowels = 0;
+
+		for (int l = 0; l <= boba.Length - 1; l++)
+		{
+			if (boba[l] == 'A' || boba[l] == 'E' || boba[l] == 'I' || boba[l] == 'O' || boba[l] == 'U' || boba[l] == 'Y')
+			{
+				vowels++;
+			}
+		}
+		Console.WriteLine("\nГласных - " + vowels);
 
 		//Берем отдельную проверку в одном цикле и меняем основные переменные чтобы не ошибиться, а дальше новый цикл с новыми значениями для коров.
 
@@ -1321,9 +1321,9 @@ public static class Type_variables
 			Console.WriteLine("Введите новое четырехзначное число");
 			string num = Console.ReadLine();
 			char[] number = num.ToCharArray();
-            char[] secret = secretNumber.ToCharArray();
+			char[] secret = secretNumber.ToCharArray();
 
-            for (int i = 0; i < number.Length; i++)
+			for (int i = 0; i < number.Length; i++)
 			{
 				if (char.IsDigit(number[i]))
 				{
@@ -1338,61 +1338,130 @@ public static class Type_variables
 
 			if (number.Length == secret.Length)
 			{
-                if (valid == true)
-                {
-                    for (int m = 0; m <= secret.Length - 1; m++)
-                    {
-                        if (number[m] == secret[m]) //Быки
-                        {
-                                bulls++;
-                                number[m] = 'X';
-                                secret[m] = 'Y';
-                        }
-                    }
+				if (valid == true)
+				{
+					for (int m = 0; m <= secret.Length - 1; m++)
+					{
+						if (number[m] == secret[m]) //Быки
+						{
+							bulls++;
+							number[m] = 'X';
+							secret[m] = 'Y';
+						}
+					}
 
-                    for (int b = 0; b <= secret.Length - 1; b++)
-                    {
+					for (int b = 0; b <= secret.Length - 1; b++)
+					{
 						if (secret[b] == 'Y')
 						{
 
 						}
 
-                        for (int c = 0; c <= number.Length - 1; c++)
-                        {
+						for (int c = 0; c <= number.Length - 1; c++)
+						{
 							if (number[c] == 'X')
 							{
 								continue;
 							}
 							else
 							{
-                                if (secret[b] == number[c]) //Коровы
-                                {
-                                    cows++;
-                                    secret[b] = 'X';
-                                    number[c] = 'Y';
+								if (secret[b] == number[c]) //Коровы
+								{
+									cows++;
+									secret[b] = 'X';
+									number[c] = 'Y';
 									break;
-                                }
-                            }
-                        }
-                    }
-                }
+								}
+							}
+						}
+					}
+				}
 
-                if (bulls == number.Length)
-                {
-                    Console.WriteLine("Вы угадали!");
-                    work = false;
-                }
-                else
-                {
-                    Console.WriteLine("Быков - " + bulls + " Коров - " + cows);
-                }
-            }
+				if (bulls == number.Length)
+				{
+					Console.WriteLine("Вы угадали!");
+					work = false;
+				}
+				else
+				{
+					Console.WriteLine("Быков - " + bulls + " Коров - " + cows);
+				}
+			}
 			else
 			{
 				num = "0";
 			}
 
-			
+
 		}
+	}
+
+	public static void DoubleFactorialArithmeticMeanGreatest()
+	{
+		Console.WriteLine("Выведем двойной факториал числа!");
+		Console.Write("Введите число - ");
+
+		int number = Convert.ToInt32(Console.ReadLine());
+		double ans = 1;
+
+		for (int i = number; i > 0; i -= 2)
+		{
+			ans *= i;
+		}
+		Console.WriteLine("2ой Факториал числа - " + number + " = " + ans);
+
+
+		double value, sumValue = 0, average;
+		int currentCount = 0;
+
+		while (true)
+		{
+			Console.Write("Введите число - ");
+			value = Convert.ToDouble(Console.ReadLine());
+
+			if (value >= 0)
+			{
+				sumValue += value;
+				currentCount++;
+			}
+			else break;
+		}
+		if (currentCount > 0)
+		{
+			average = sumValue / (double)currentCount;
+			Console.WriteLine("Ваше среднее арифметическое - " + average);
+		}
+		else
+		{
+			Console.Write("Вы не ввели ни одного числа!");
+		}
+	}
+
+	public static void CommonDivisor()
+	{
+		Console.WriteLine("Будем искать НОД");
+		int valueA, valueB, temp;
+
+		Console.Write("Введите первое число - ");
+		valueA = Convert.ToInt32(Console.ReadLine());
+		valueA = Math.Abs(valueA);
+
+
+        Console.Write("Введите второе число - ");
+		valueB = Convert.ToInt32(Console.ReadLine());
+		valueB = Math.Abs(valueB);
+
+            while (valueB != 0)
+			{
+				temp = valueA % valueB;
+				valueA = valueB;
+				valueB = temp;
+			}
+			Console.WriteLine("Ваш ответ - " + valueA);
+
+	}
+	public static void Rhomb()
+	{
+		
     }
 }
