@@ -1253,51 +1253,51 @@ public static class Type_variables
     }
     public static void SumReverseTextBullsAndCowsVowels()
     {
-		Console.WriteLine("Введите любой текст, выведем его наоборот");
-		string text = Console.ReadLine();
+		//Console.WriteLine("Введите любой текст, выведем его наоборот");
+		//string text = Console.ReadLine();
 
 
-		for (int i = text.Length - 1; i >= 0; i--)
-		{
-			Console.Write(text[i]);
-		}
+		//for (int i = text.Length - 1; i >= 0; i--)
+		//{
+		//	Console.Write(text[i]);
+		//}
 
-		Console.WriteLine("\n\nВведите любое число, посчитаем сумму его цифр");
-		string numbers = Console.ReadLine();
-		int sum = 0;
-		for (int k = 0; k <= numbers.Length - 1; k++)
-		{
-			if (char.IsDigit(numbers[k]))
-			{
-				sum += Convert.ToInt32(numbers[k].ToString());
-				if (k == numbers.Length - 1)
-				{
-					Console.Write("Ваша сумма - " + sum);
-				}
-			}
-			else
-			{
-				sum = 0;
-				Console.WriteLine("Вы ввели символы которые не являются числом");
-				break;
-			}
-		}
+		//Console.WriteLine("\n\nВведите любое число, посчитаем сумму его цифр");
+		//string numbers = Console.ReadLine();
+		//int sum = 0;
+		//for (int k = 0; k <= numbers.Length - 1; k++)
+		//{
+		//	if (char.IsDigit(numbers[k]))
+		//	{
+		//		sum += Convert.ToInt32(numbers[k].ToString());
+		//		if (k == numbers.Length - 1)
+		//		{
+		//			Console.Write("Ваша сумма - " + sum);
+		//		}
+		//	}
+		//	else
+		//	{
+		//		sum = 0;
+		//		Console.WriteLine("Вы ввели символы которые не являются числом");
+		//		break;
+		//	}
+		//}
 
-		Console.WriteLine("\n\nТеперь посчитаем сколько гласных в том что вы введете");
-		//A, E, I, O, U, Y
-		Console.Write("Введите любую строку - ");
-		string boba = Console.ReadLine();
-		boba = boba.ToUpper();
-		int vowels = 0;
+		//Console.WriteLine("\n\nТеперь посчитаем сколько гласных в том что вы введете");
+		////A, E, I, O, U, Y
+		//Console.Write("Введите любую строку - ");
+		//string boba = Console.ReadLine();
+		//boba = boba.ToUpper();
+		//int vowels = 0;
 
-		for (int l = 0; l <= boba.Length - 1; l++)
-		{
-			if (boba[l] == 'A' || boba[l] == 'E' || boba[l] == 'I' || boba[l] == 'O' || boba[l] == 'U' || boba[l] == 'Y')
-			{
-				vowels++;
-			}
-		}
-		Console.WriteLine("\nГласных - " + vowels);
+		//for (int l = 0; l <= boba.Length - 1; l++)
+		//{
+		//	if (boba[l] == 'A' || boba[l] == 'E' || boba[l] == 'I' || boba[l] == 'O' || boba[l] == 'U' || boba[l] == 'Y')
+		//	{
+		//		vowels++;
+		//	}
+		//}
+		//Console.WriteLine("\nГласных - " + vowels);
 
 		//Берем отдельную проверку в одном цикле и меняем основные переменные чтобы не ошибиться, а дальше новый цикл с новыми значениями для коров.
 
@@ -1305,7 +1305,6 @@ public static class Type_variables
 
 		Random rnd = new Random();
 		string secretNumber = Convert.ToString(rnd.Next(1000, 9999));
-		char[] secret = secretNumber.ToCharArray();
 
 		Console.WriteLine("Компьютер загадал число давай угадывать: " +
 			"Быки - это числа которые ты угадал и они стоят на месте тех цифр в числе которое загадал компьютер." +
@@ -1322,8 +1321,9 @@ public static class Type_variables
 			Console.WriteLine("Введите новое четырехзначное число");
 			string num = Console.ReadLine();
 			char[] number = num.ToCharArray();
+            char[] secret = secretNumber.ToCharArray();
 
-			for (int i = 0; i < number.Length; i++)
+            for (int i = 0; i < number.Length; i++)
 			{
 				if (char.IsDigit(number[i]))
 				{
@@ -1336,45 +1336,63 @@ public static class Type_variables
 				}
 			}
 
-			if (valid = true)
+			if (number.Length == secret.Length)
 			{
-				for (int m = 0; m <= secret.Length - 1; m++)
-				{
-					for (int n = 0; n <= number.Length - 1; n++)
-					{
-						for(int o = 0; o <= number.Length - 1; o++)
+                if (valid == true)
+                {
+                    for (int m = 0; m <= secret.Length - 1; m++)
+                    {
+                        if (number[m] == secret[m]) //Быки
+                        {
+                                bulls++;
+                                number[m] = 'X';
+                                secret[m] = 'Y';
+                        }
+                    }
+
+                    for (int b = 0; b <= secret.Length - 1; b++)
+                    {
+						if (secret[b] == 'Y')
 						{
-							if (secret[o] == number[o] && o == m)
-							{
-								bulls++;
-								secret[o] = 'X';
-								number[o] = 'y';
- 							}
+
 						}
-						for (int p = 0; p <= number.Length - 1; p++)
-						{
-							if (secret[p] == number[p] && p != m)
+
+                        for (int c = 0; c <= number.Length - 1; c++)
+                        {
+							if (number[c] == 'X')
 							{
-                                if (secret[p] == 'X')
-                                {
-                                    continue;
-                                }
-                                cows++;
-								secret[p] = 'x';
-								number[p] = 'y';
+								continue;
 							}
-						}
-					}
-				}
-			}
-			if (bulls == number.Length)
-			{
-				Console.WriteLine("Вы угадали!");
-			}
+							else
+							{
+                                if (secret[b] == number[c]) //Коровы
+                                {
+                                    cows++;
+                                    secret[b] = 'X';
+                                    number[c] = 'Y';
+									break;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                if (bulls == number.Length)
+                {
+                    Console.WriteLine("Вы угадали!");
+                    work = false;
+                }
+                else
+                {
+                    Console.WriteLine("Быков - " + bulls + " Коров - " + cows);
+                }
+            }
 			else
 			{
-				Console.WriteLine("Коров - " + cows + " Быков - " + bulls);
+				num = "0";
 			}
+
+			
 		}
     }
 }
