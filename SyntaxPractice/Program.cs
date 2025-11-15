@@ -1,9 +1,19 @@
-﻿namespace HelloWorld
+﻿using SyntaxPractice;
+
+namespace HelloWorld
 {
     internal class Program
     {
         static void Main(string[] args)
         {
+            int[] testArray = { 5, 10, 15, 20 };
+            Block4_ArraysAndMethods.PrintArray(testArray);
+
+
+
+
+
+
             /*Type_variables.AcquaintanceTask();
             Type_variables.StructFloatAndOperation();
             Type_variables.ConvertStringAndAgePerson();

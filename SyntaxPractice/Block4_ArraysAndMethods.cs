@@ -8,5 +8,12 @@ namespace SyntaxPractice
 {
     public static class Block4_ArraysAndMethods
     {
+        public static void PrintArray (int[] arryaToPrint)
+        {
+            foreach (int i in arryaToPrint)
+            {
+                Console.Write($"{i} ");
+            }
+        }
     }
 }
