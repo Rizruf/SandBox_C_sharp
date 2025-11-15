@@ -1462,46 +1462,77 @@ public static class Type_variables
 	}
 	public static void Rhomb()
 	{
-		int steptop = 10;
+		//int steptop = 10;
 
-		for (int down = 0; down <= 10; down++)
+		//for (int down = 0; down <= 10; down++)
+		//{
+		//	for (int space = 0; space < steptop; space++)
+		//	{
+		//		Console.Write(" ");
+		//          }
+		//	for (int starsLeft = 0; starsLeft < down; starsLeft++)
+		//	{
+		//              Console.Write("*");
+		//          }
+		//	for(int starsRight = 0; starsRight < down - 1; starsRight++)
+		//	{
+		//              Console.Write("*");
+		//          }
+		//	steptop--;
+		//          Console.WriteLine();
+		//      }
+
+		//int stepunder = 1;
+		//int stars = 10;
+		//for (int down = 0; down < 10; down++)
+		//{
+		//	for (int space = 0; space <= stepunder - 2; space++)
+		//	{
+		//		Console.Write(" ");
+		//          }
+		//	for (int starsLeft = stars; starsLeft > 0; starsLeft--)
+		//	{
+		//              Console.Write("*");
+		//          }
+		//	for (int starsRight = stars - 1; starsRight > 0; starsRight--)
+		//	{
+		//              Console.Write("*");
+		//          }
+		//	stepunder++;
+		//	stars--;
+		//          Console.WriteLine("");
+		//      }
+
+		//новый ромб написаный нормальной!
+
+		Console.Write("Введите размер ромба - ");
+
+		int size = Convert.ToInt32(Console.ReadLine());
+
+		for (int i = 0; i < size; i++)
 		{
-			for (int space = 0; space < steptop; space++)
+			for (int k = 0; k < size-1-i; k++)
 			{
 				Console.Write(" ");
-            }
-			for (int starsLeft = 0; starsLeft < down; starsLeft++)
+			}
+			for (int l = 0; l < 2*i-1; l++)
 			{
-                Console.Write("*");
-            }
-			for(int starsRight = 0; starsRight < down - 1; starsRight++)
-			{
-                Console.Write("*");
-            }
-			steptop--;
-            Console.WriteLine();
-        }
+				Console.Write("*");
+			}
+			Console.WriteLine();
+		}
 
-		int stepunder = 1;
-		int stars = 10;
-		for (int down = 0; down < 10; down++)
+		for (int m = size - 2; m >= 0; m--)
 		{
-			for (int space = 0; space <= stepunder - 2; space++)
+			for (int n = 0;n < size - 1 - m; n++)
 			{
 				Console.Write(" ");
-            }
-			for (int starsLeft = stars; starsLeft > 0; starsLeft--)
+			}
+			for (int b = 0;b < 2 * m -1; b++)
 			{
-                Console.Write("*");
-            }
-			for (int starsRight = stars - 1; starsRight > 0; starsRight--)
-			{
-                Console.Write("*");
-            }
-			stepunder++;
-			stars--;
-            Console.WriteLine("");
-        }
-	
+				Console.Write("*");
+			}
+			Console.WriteLine();
+		}
     }
 }
