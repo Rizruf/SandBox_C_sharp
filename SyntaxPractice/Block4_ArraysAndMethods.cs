@@ -75,5 +75,36 @@ namespace SyntaxPractice
                 Block4_ArraysAndMethods.FillArrayWithRandoms(array, beginningInterval, boundaryInterval, randGenerator);
             Block4_ArraysAndMethods.PrintArray(array);
         }
+
+        public static int[] FillCreateArrayFromUserInput(int size)
+        {
+            int[] array = new int[size];
+
+            for (int arrayElement = 0; arrayElement < size; arrayElement++)
+            {
+                Console.WriteLine("Введите " +  (arrayElement + 1) + " элемент массива");
+                int inputElementValue = Convert.ToInt32(Console.ReadLine());
+                array[arrayElement] = inputElementValue;
+            }
+
+            return array;
+        }
+        public static void Test_FillCreateArrayFromUserInput()
+        {
+            Console.Write("Введите размерность массива - ");
+            int sizeArray = Convert.ToInt32(Console.ReadLine());
+
+            if (sizeArray == 0)
+            {
+                Console.Write("Ваш массив не существует т.к размер его 0");
+                return;
+            }
+
+            int[] creatArray = FillCreateArrayFromUserInput(sizeArray);
+
+            Block4_ArraysAndMethods.PrintArray(creatArray);
+
+        }
+
     }
 }

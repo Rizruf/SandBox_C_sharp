@@ -7,7 +7,8 @@ namespace HelloWorld
         static void Main(string[] args)
         {
             //Block4_ArraysAndMethods.Test_PrintArray();
-            Block4_ArraysAndMethods.Test_FillArrayWithRandoms();
+            //Block4_ArraysAndMethods.Test_FillArrayWithRandoms();
+            Block4_ArraysAndMethods.Test_FillCreateArrayFromUserInput();
 
 
 
