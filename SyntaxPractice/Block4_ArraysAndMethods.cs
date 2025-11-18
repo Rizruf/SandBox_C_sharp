@@ -106,5 +106,59 @@ namespace SyntaxPractice
 
         }
 
+        public static int SumModul (int[] number)
+        {
+            int sumNumbers = 0;
+
+            foreach (var arrayElement in number)
+            {
+                sumNumbers += arrayElement;
+            }
+
+            return sumNumbers;
+        }
+        public static double Average (int[] numbers)
+        {
+            double value = Convert.ToDouble(Block4_ArraysAndMethods.SumModul(numbers));
+            double counts = 0;
+            double avr;
+
+            for (int numberElement = 0; numberElement < numbers.Length; numberElement++)
+            {
+                counts++;
+            }
+
+            avr = value / counts;
+
+            return avr;
+        }
+        public static void Test_SumAndAverage()
+        {
+            Console.WriteLine("Задан массив из случайных чисел");
+            Random rnd = new Random();
+
+            Console.Write("Задайте размер массива - ");
+            int size = Convert.ToInt32(Console.ReadLine());
+
+            int[] array = new int [size];
+
+            if (size == 0 || size < 0)
+            {
+                Console.WriteLine("Вы ввели массив в котором ничего нет - 0");
+            }
+            else
+            {
+                for (int arrayElement = 0; arrayElement < array.Length; arrayElement++)
+                {
+                    array[arrayElement] = rnd.Next(0, 100);
+                    Console.Write($"{array[arrayElement]} ");
+                }
+
+                Console.WriteLine("\nСумма чисел в массива - " + Block4_ArraysAndMethods.SumModul(array));
+                Console.WriteLine("Усредненное число массива - " + Block4_ArraysAndMethods.Average(array));
+            }
+            
+        }
+
     }
 }
