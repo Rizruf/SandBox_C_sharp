@@ -156,15 +156,12 @@ namespace SyntaxPractice
             {
                 return new int[0];
             }
-            else
-            {
                 int[] array = new int[size];
                 for (int arrayElement = 0; arrayElement < array.Length; arrayElement++)
                 {
                     array[arrayElement] = rnd.Next(0, 100);
                 }
                 return array;
-            }
         }
 
 
@@ -172,11 +169,8 @@ namespace SyntaxPractice
         {
             if (array.Length == 0)
             {
-                Console.WriteLine("Размер массива 0");
-                return 0;
+                throw new InvalidOperationException("Невозможно найти минимальный элемент в пустом массиве.");
             }
-            else
-            {
                 int minValue = array[0];
                 foreach (int minElement in array)
                 {
@@ -185,20 +179,15 @@ namespace SyntaxPractice
                         minValue = minElement;
                     }
                 }
-                return minValue;
-            }
-                
+                return minValue;   
         }
         public static int FindMax ( int[] array )
         {
 
             if (array.Length == 0)
             {
-                Console.WriteLine("Размер массива 0");
-                return 0;
+                throw new InvalidOperationException("Невозможно найти минимальный элемент в пустом массиве.");
             }
-            else
-            {
                 int maxValue = array[0];
                 foreach (int maxElement in array)
                 {
@@ -208,7 +197,6 @@ namespace SyntaxPractice
                     }
                 }
                 return maxValue;
-            }
         }
         public static void Test_FindMaxAndFindMin()
         {
@@ -223,7 +211,35 @@ namespace SyntaxPractice
             Console.WriteLine("Максимальное значение в массиве - " + Block4_ArraysAndMethods.FindMax(currentArray));
         }
 
-        
+        public static int[] PrintReversedArray(int[] array)
+        {
+            int elementsReversed = 0;
+            if (array.Length == 0)
+            {
+                return new int[0];
+            }
+
+                int[] reversedArray = new int[array.Length];
+                for (int arrayElements = array.Length - 1; arrayElements >= 0; arrayElements--)
+                {
+                    reversedArray[elementsReversed] = array[arrayElements];
+                    elementsReversed++;
+                }
+                return reversedArray;
+        }
+        public static void Test_PrintReversedArray()
+        {
+            Console.Write("Введите размер массива - ");
+            int size = Convert.ToInt32(Console.ReadLine());
+
+            Random rnd = new Random();
+            int[] currentArray = Block4_ArraysAndMethods.CreateRandomArray(size, rnd);
+
+            Block4_ArraysAndMethods.PrintArray(currentArray);
+            int[] reversedARray = Block4_ArraysAndMethods.PrintReversedArray(currentArray);
+                Console.Write("\nПеревернутый массив - ");
+            Block4_ArraysAndMethods.PrintArray(reversedARray);
+        }
 
     }
 }
