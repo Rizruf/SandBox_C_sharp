@@ -311,6 +311,14 @@ namespace SyntaxPractice
             {
                 Console.Write($"{elements} ");
             }
+
+            array[3] = 10; Console.WriteLine();
+
+            foreach (int elements in array)
+            {
+
+                Console.Write($"{elements} ");
+            }
         }
 
 
