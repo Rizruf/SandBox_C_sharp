@@ -321,6 +321,22 @@ namespace SyntaxPractice
             }
         }
 
+        public static int[] Sort(int[] array)
+        {
+            Array.Sort(array);
+            return array;
+        }
+        public static void Test_Sort()
+        {
+            int[] array = { 10, 20, 54123, 123, 122, 123 };
+
+            int[] sort = Block4_ArraysAndMethods.Sort(array);
+
+            foreach (int elementSortArray in sort)
+            {
+                Console.Write($"{elementSortArray} ");
+            }
+        }
 
     }
 }

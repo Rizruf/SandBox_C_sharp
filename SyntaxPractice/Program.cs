@@ -14,7 +14,8 @@ namespace HelloWorld
             //Block4_ArraysAndMethods.Test_PrintReversedArray();
             //Block4_ArraysAndMethods.Test_Contains();
             //Block4_ArraysAndMethods.Test_PrintMatrix();
-            Block4_ArraysAndMethods.Test_CopyArray();
+            //Block4_ArraysAndMethods.Test_CopyArray();
+            Block4_ArraysAndMethods.Test_Sort();
 
 
 
