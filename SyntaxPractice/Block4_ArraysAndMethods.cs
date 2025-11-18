@@ -241,5 +241,33 @@ namespace SyntaxPractice
             Block4_ArraysAndMethods.PrintArray(reversedARray);
         }
 
+        public static bool Contains(object[] array, object element)
+        {
+            bool find = false;
+            foreach (object item in array)
+            {
+                if (item == element)
+                {
+                    find = true;
+                    break;
+                }
+            }
+            return find;
+        }
+        public static void Test_Contains()
+        {
+            object[] array = { 1, "telephone", "bomba", "legs", "eye"};
+
+            object findElement = "bomba";
+            object findElement2 = "bimba";
+
+            bool isBombaFound = Block4_ArraysAndMethods.Contains(array, findElement);
+           bool isBimbaFound = Block4_ArraysAndMethods.Contains(array, findElement2);
+
+            Console.WriteLine("Ищем 'bomba'. Результат: " + isBombaFound);
+            Console.WriteLine("Ищем 'bimba'. Результат: " + isBimbaFound); 
+        }
+
+        
     }
 }

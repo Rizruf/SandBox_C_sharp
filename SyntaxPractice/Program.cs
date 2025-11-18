@@ -11,7 +11,9 @@ namespace HelloWorld
             //Block4_ArraysAndMethods.Test_FillCreateArrayFromUserInput();
             //Block4_ArraysAndMethods.Test_SumAndAverage();
             //Block4_ArraysAndMethods.Test_FindMaxAndFindMin();
-            Block4_ArraysAndMethods.Test_PrintReversedArray();
+            //Block4_ArraysAndMethods.Test_PrintReversedArray();
+            //Block4_ArraysAndMethods.Test_Contains();
+            Block4_ArraysAndMethods.Test_PrintMatrix();
 
 
 
