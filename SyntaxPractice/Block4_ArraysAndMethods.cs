@@ -106,27 +106,22 @@ namespace SyntaxPractice
 
         }
 
-        public static int SumModul (int[] number)
+        public static int GetSum (int[] array)
         {
             int sumNumbers = 0;
 
-            foreach (var arrayElement in number)
+            foreach (int arrayElement in array)
             {
                 sumNumbers += arrayElement;
             }
 
             return sumNumbers;
         }
-        public static double Average (int[] numbers)
+        public static double GetAverage (int[] array)
         {
-            double value = Convert.ToDouble(Block4_ArraysAndMethods.SumModul(numbers));
-            double counts = 0;
+            double value = Convert.ToDouble(Block4_ArraysAndMethods.GetSum(array));
+            double counts = array.Length;
             double avr;
-
-            for (int numberElement = 0; numberElement < numbers.Length; numberElement++)
-            {
-                counts++;
-            }
 
             avr = value / counts;
 
@@ -138,27 +133,97 @@ namespace SyntaxPractice
             Random rnd = new Random();
 
             Console.Write("Задайте размер массива - ");
-            int size = Convert.ToInt32(Console.ReadLine());
+            int sizeArray = Convert.ToInt32(Console.ReadLine());
 
-            int[] array = new int [size];
-
-            if (size == 0 || size < 0)
+            if (sizeArray == 0 || sizeArray < 0)
             {
                 Console.WriteLine("Вы ввели массив в котором ничего нет - 0");
             }
             else
             {
-                for (int arrayElement = 0; arrayElement < array.Length; arrayElement++)
-                {
-                    array[arrayElement] = rnd.Next(0, 100);
-                    Console.Write($"{array[arrayElement]} ");
-                }
+                int[] CurrentArray = Block4_ArraysAndMethods.CreateRandomArray(sizeArray, rnd);
 
-                Console.WriteLine("\nСумма чисел в массива - " + Block4_ArraysAndMethods.SumModul(array));
-                Console.WriteLine("Усредненное число массива - " + Block4_ArraysAndMethods.Average(array));
+                Console.WriteLine("\nСумма чисел в массива - " + Block4_ArraysAndMethods.GetSum(CurrentArray));
+                Console.WriteLine("Усредненное число массива - " + Block4_ArraysAndMethods.GetAverage(CurrentArray));
             }
             
         }
+
+
+        public static int[] CreateRandomArray(int size, Random rnd)
+        {
+            if (size == 0 || size < 0)
+            {
+                return new int[0];
+            }
+            else
+            {
+                int[] array = new int[size];
+                for (int arrayElement = 0; arrayElement < array.Length; arrayElement++)
+                {
+                    array[arrayElement] = rnd.Next(0, 100);
+                }
+                return array;
+            }
+        }
+
+
+        public static int FindMin( int[] array )
+        {
+            if (array.Length == 0)
+            {
+                Console.WriteLine("Размер массива 0");
+                return 0;
+            }
+            else
+            {
+                int minValue = array[0];
+                foreach (int minElement in array)
+                {
+                    if (minValue > minElement)
+                    {
+                        minValue = minElement;
+                    }
+                }
+                return minValue;
+            }
+                
+        }
+        public static int FindMax ( int[] array )
+        {
+
+            if (array.Length == 0)
+            {
+                Console.WriteLine("Размер массива 0");
+                return 0;
+            }
+            else
+            {
+                int maxValue = array[0];
+                foreach (int maxElement in array)
+                {
+                    if (maxValue < maxElement)
+                    {
+                        maxValue = maxElement;
+                    }
+                }
+                return maxValue;
+            }
+        }
+        public static void Test_FindMaxAndFindMin()
+        {
+            Console.Write("Введите размер массива - ");
+            int sizeArray = Convert.ToInt32(Console.ReadLine());
+            Random rnd = new Random();
+
+            int[] currentArray = Block4_ArraysAndMethods.CreateRandomArray(sizeArray, rnd);
+
+            Block4_ArraysAndMethods.PrintArray(currentArray);
+            Console.WriteLine("\nМинимальное значение в массиве - " + Block4_ArraysAndMethods.FindMin(currentArray));
+            Console.WriteLine("Максимальное значение в массиве - " + Block4_ArraysAndMethods.FindMax(currentArray));
+        }
+
+        
 
     }
 }
