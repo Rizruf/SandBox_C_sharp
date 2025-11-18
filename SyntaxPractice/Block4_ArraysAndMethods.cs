@@ -290,20 +290,29 @@ namespace SyntaxPractice
             Block4_ArraysAndMethods.PrintMatrix(matrix);
         }
 
-        public static void CopyArray(int[] array)
+        public static int[] CopyArray(int[] array)
         {
-            int[] copyArray = array;
+            int size = array.Length;
+            int[] copyArray = new int [size];
 
-            foreach (int elements in copyArray)
+            for (int elements = 0; elements < copyArray.Length; elements++)
             {
-                Console.Write($"{elements} ");
+                copyArray[elements] = array[elements];
             }
+            return copyArray;
         }
         public static void Test_CopyArray()
         {
             int[] array = {1,2,3,4,5,6};
 
-            Block4_ArraysAndMethods.CopyArray(array);
+            int[] copyArray = Block4_ArraysAndMethods.CopyArray(array);
+            
+            foreach (int elements in copyArray)
+            {
+                Console.Write($"{elements} ");
+            }
         }
+
+
     }
 }
