@@ -372,5 +372,49 @@ namespace SyntaxPractice
                 Console.Write($"{mergeElements} ");
             }
         }
+
+        public static int[] ShiftLeft(int[]array)
+        {
+            int[] shiftLeftArray = array;
+            int elementToSave = shiftLeftArray[0];
+
+            for (int elementsArrayShift = 1; elementsArrayShift < shiftLeftArray.Length; elementsArrayShift++)
+            {
+                shiftLeftArray[elementsArrayShift - 1] = shiftLeftArray[elementsArrayShift];
+            }
+            shiftLeftArray[shiftLeftArray.Length - 1] = elementToSave;
+
+            return shiftLeftArray;
+        }
+
+        public static int[] ShiftRight(int[] array)
+        {
+            int[] shiftRightArray = array;
+            int elementToSave = shiftRightArray[shiftRightArray.Length - 1];
+
+            for (int elementsArrayShift = shiftRightArray.Length - 1;  elementsArrayShift >= 1;  elementsArrayShift--)
+              {
+                   shiftRightArray[elementsArrayShift] = shiftRightArray[elementsArrayShift - 1];
+              }
+            shiftRightArray[0] = elementToSave;
+
+            return shiftRightArray;
+        }
+
+
+        public static void Test_ShiftLeft()
+        {
+            int[] array1 = { 10, 20, 30, 10, 20, 50, 140, 90 };
+
+            if (array1.Length <= 0)
+            {
+                Console.WriteLine("Массив пустой!");
+            }
+            else
+            {
+                Block4_ArraysAndMethods.ShiftLeft(array1);
+                Block4_ArraysAndMethods.ShiftRight(array1);
+            }
+        }
     }
 }
