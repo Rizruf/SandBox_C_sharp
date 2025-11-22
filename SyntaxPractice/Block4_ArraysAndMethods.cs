@@ -354,7 +354,6 @@ namespace SyntaxPractice
                 }
                 return mergeArray;
         }
-
         public static void Test_MergeArrays()
         {
             int[] array1 = new int [0];
@@ -386,7 +385,6 @@ namespace SyntaxPractice
 
             return shiftLeftArray;
         }
-
         public static int[] ShiftRight(int[] array)
         {
             int[] shiftRightArray = array;
@@ -400,8 +398,6 @@ namespace SyntaxPractice
 
             return shiftRightArray;
         }
-
-
         public static void Test_ShiftLeft()
         {
             int[] array1 = { 10, 20, 30, 10, 20, 50, 140, 90 };
@@ -421,7 +417,7 @@ namespace SyntaxPractice
         {
             foreach (string element in array)
             {
-                Console.Write($"{element} \n");
+                Console.Write($"{element} ");
             }
         }
         public static void PrintArrayOverload (int[] array)
@@ -440,5 +436,21 @@ namespace SyntaxPractice
                 Block4_ArraysAndMethods.PrintArrayOverload(array);
             
         }
+
+        public static void Swap (ref int a, ref int b)
+        {
+            (a,b) = (b,a);
+        }
+        public static void Test_Swap()
+        {
+            int x = 10;
+            int y = 20;
+            Console.WriteLine($"До: x={x}, y={y}");
+
+            Block4_ArraysAndMethods.Swap(ref x, ref y);
+            Console.WriteLine($"После: x={x}, y={y}");
+        }
+        
+
     }
 }
