@@ -17,7 +17,8 @@ namespace HelloWorld
             //Block4_ArraysAndMethods.Test_CopyArray();
             //Block4_ArraysAndMethods.Test_Sort();
             //Block4_ArraysAndMethods.Test_MergeArrays();
-            Block4_ArraysAndMethods.Test_ShiftLeft();
+            //Block4_ArraysAndMethods.Test_ShiftLeft();
+            Block4_ArraysAndMethods.Test_PrintArrayOverload();
 
 
 

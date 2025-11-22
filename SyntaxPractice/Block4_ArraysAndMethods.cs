@@ -416,5 +416,29 @@ namespace SyntaxPractice
                 Block4_ArraysAndMethods.ShiftRight(array1);
             }
         }
+
+        public static void PrintArrayOverload (string[] array)
+        {
+            foreach (string element in array)
+            {
+                Console.Write($"{element} \n");
+            }
+        }
+        public static void PrintArrayOverload (int[] array)
+        {
+            foreach (int element in array)
+            {
+                Console.Write($"{element} ");
+            }
+        }
+        public static void Test_PrintArrayOverload()
+        {
+            int[] array = { 10, 20, 30, 40 };
+            string[] array1 = {"nothing", "gfgf" };
+
+                Block4_ArraysAndMethods.PrintArrayOverload(array1);
+                Block4_ArraysAndMethods.PrintArrayOverload(array);
+            
+        }
     }
 }
