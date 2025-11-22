@@ -10,7 +10,7 @@ namespace SyntaxPractice
 {
     public static class Block4_ArraysAndMethods
     {
-        public static void PrintArray (int[] arryaToPrint)
+        public static void PrintArray(int[] arryaToPrint)
         {
             foreach (int ArrayElement in arryaToPrint)
             {
@@ -19,7 +19,7 @@ namespace SyntaxPractice
         }
         public static void Test_PrintArray()
         {
-            int[] fristArray = {1, 2, 3, 4, 5};
+            int[] fristArray = { 1, 2, 3, 4, 5 };
             int[] secondArray = { 2, 3, 5, 1, -6, -2 };
 
             //int thirdArray = 10;
@@ -30,13 +30,13 @@ namespace SyntaxPractice
 
             //При попытке засунуть инт под видом массива, среда разработки говорит что нельзя так делать. 2 разных типа.
             //Block4_ArraysAndMethods.PrintArray(thirdArray);
-            
-            
+
+
         }
 
         public static void FillArrayWithRandoms(int[] arrayToFill, int beginningInterval, int boundaryInterval, Random randGenerator)
         {
-            
+
 
             if (boundaryInterval < beginningInterval)
             {
@@ -54,7 +54,7 @@ namespace SyntaxPractice
         public static void Test_FillArrayWithRandoms()
         {
             Random randGenerator = new Random();
-            int[] array = new int [5];
+            int[] array = new int[5];
 
             Console.WriteLine("Введите ограничение для генерации целых чисел, от и до числа, для массива");
 
@@ -72,7 +72,7 @@ namespace SyntaxPractice
                 Console.WriteLine("Вы ввели массив с одним числом");
             }
 
-                Block4_ArraysAndMethods.FillArrayWithRandoms(array, beginningInterval, boundaryInterval, randGenerator);
+            Block4_ArraysAndMethods.FillArrayWithRandoms(array, beginningInterval, boundaryInterval, randGenerator);
             Block4_ArraysAndMethods.PrintArray(array);
         }
 
@@ -82,7 +82,7 @@ namespace SyntaxPractice
 
             for (int arrayElement = 0; arrayElement < size; arrayElement++)
             {
-                Console.WriteLine("Введите " +  (arrayElement + 1) + " элемент массива");
+                Console.WriteLine("Введите " + (arrayElement + 1) + " элемент массива");
                 int inputElementValue = Convert.ToInt32(Console.ReadLine());
                 array[arrayElement] = inputElementValue;
             }
@@ -106,7 +106,7 @@ namespace SyntaxPractice
 
         }
 
-        public static int GetSum (int[] array)
+        public static int GetSum(int[] array)
         {
             int sumNumbers = 0;
 
@@ -117,7 +117,7 @@ namespace SyntaxPractice
 
             return sumNumbers;
         }
-        public static double GetAverage (int[] array)
+        public static double GetAverage(int[] array)
         {
             double value = Convert.ToDouble(Block4_ArraysAndMethods.GetSum(array));
             double counts = array.Length;
@@ -146,7 +146,7 @@ namespace SyntaxPractice
                 Console.WriteLine("\nСумма чисел в массива - " + Block4_ArraysAndMethods.GetSum(CurrentArray));
                 Console.WriteLine("Усредненное число массива - " + Block4_ArraysAndMethods.GetAverage(CurrentArray));
             }
-            
+
         }
 
 
@@ -156,47 +156,47 @@ namespace SyntaxPractice
             {
                 return new int[0];
             }
-                int[] array = new int[size];
-                for (int arrayElement = 0; arrayElement < array.Length; arrayElement++)
-                {
-                    array[arrayElement] = rnd.Next(0, 100);
-                }
-                return array;
+            int[] array = new int[size];
+            for (int arrayElement = 0; arrayElement < array.Length; arrayElement++)
+            {
+                array[arrayElement] = rnd.Next(0, 100);
+            }
+            return array;
         }
 
 
-        public static int FindMin( int[] array )
+        public static int FindMin(int[] array)
         {
             if (array.Length == 0)
             {
                 throw new InvalidOperationException("Невозможно найти минимальный элемент в пустом массиве.");
             }
-                int minValue = array[0];
-                foreach (int minElement in array)
+            int minValue = array[0];
+            foreach (int minElement in array)
+            {
+                if (minValue > minElement)
                 {
-                    if (minValue > minElement)
-                    {
-                        minValue = minElement;
-                    }
+                    minValue = minElement;
                 }
-                return minValue;   
+            }
+            return minValue;
         }
-        public static int FindMax ( int[] array )
+        public static int FindMax(int[] array)
         {
 
             if (array.Length == 0)
             {
                 throw new InvalidOperationException("Невозможно найти минимальный элемент в пустом массиве.");
             }
-                int maxValue = array[0];
-                foreach (int maxElement in array)
+            int maxValue = array[0];
+            foreach (int maxElement in array)
+            {
+                if (maxValue < maxElement)
                 {
-                    if (maxValue < maxElement)
-                    {
-                        maxValue = maxElement;
-                    }
+                    maxValue = maxElement;
                 }
-                return maxValue;
+            }
+            return maxValue;
         }
         public static void Test_FindMaxAndFindMin()
         {
@@ -219,13 +219,13 @@ namespace SyntaxPractice
                 return new int[0];
             }
 
-                int[] reversedArray = new int[array.Length];
-                for (int arrayElements = array.Length - 1; arrayElements >= 0; arrayElements--)
-                {
-                    reversedArray[elementsReversed] = array[arrayElements];
-                    elementsReversed++;
-                }
-                return reversedArray;
+            int[] reversedArray = new int[array.Length];
+            for (int arrayElements = array.Length - 1; arrayElements >= 0; arrayElements--)
+            {
+                reversedArray[elementsReversed] = array[arrayElements];
+                elementsReversed++;
+            }
+            return reversedArray;
         }
         public static void Test_PrintReversedArray()
         {
@@ -237,7 +237,7 @@ namespace SyntaxPractice
 
             Block4_ArraysAndMethods.PrintArray(currentArray);
             int[] reversedARray = Block4_ArraysAndMethods.PrintReversedArray(currentArray);
-                Console.Write("\nПеревернутый массив - ");
+            Console.Write("\nПеревернутый массив - ");
             Block4_ArraysAndMethods.PrintArray(reversedARray);
         }
 
@@ -256,16 +256,16 @@ namespace SyntaxPractice
         }
         public static void Test_Contains()
         {
-            object[] array = { 1, "telephone", "bomba", "legs", "eye"};
+            object[] array = { 1, "telephone", "bomba", "legs", "eye" };
 
             object findElement = "bomba";
             object findElement2 = "bimba";
 
             bool isBombaFound = Block4_ArraysAndMethods.Contains(array, findElement);
-           bool isBimbaFound = Block4_ArraysAndMethods.Contains(array, findElement2);
+            bool isBimbaFound = Block4_ArraysAndMethods.Contains(array, findElement2);
 
             Console.WriteLine("Ищем 'bomba'. Результат: " + isBombaFound);
-            Console.WriteLine("Ищем 'bimba'. Результат: " + isBimbaFound); 
+            Console.WriteLine("Ищем 'bimba'. Результат: " + isBimbaFound);
         }
 
         public static void PrintMatrix(int[,] matrix)
@@ -293,7 +293,7 @@ namespace SyntaxPractice
         public static int[] CopyArray(int[] array)
         {
             int size = array.Length;
-            int[] copyArray = new int [size];
+            int[] copyArray = new int[size];
 
             for (int elements = 0; elements < copyArray.Length; elements++)
             {
@@ -303,10 +303,10 @@ namespace SyntaxPractice
         }
         public static void Test_CopyArray()
         {
-            int[] array = {1,2,3,4,5,6};
+            int[] array = { 1, 2, 3, 4, 5, 6 };
 
             int[] copyArray = Block4_ArraysAndMethods.CopyArray(array);
-            
+
             foreach (int elements in copyArray)
             {
                 Console.Write($"{elements} ");
@@ -338,5 +338,39 @@ namespace SyntaxPractice
             }
         }
 
+        public static int[] MergeArrays(int[] array1, int[] array2)
+        {
+            int lengthMrgeArray = array1.Length + array2.Length;
+            int[] mergeArray = new int[lengthMrgeArray];
+
+                for (int elementsArray1 = 0; elementsArray1 < array1.Length; elementsArray1++)
+                {
+                    mergeArray[elementsArray1] = array1[elementsArray1];
+
+                }
+                for (int elementsArray2 = 0; elementsArray2 < array2.Length; elementsArray2++)
+                {
+                    mergeArray[array1.Length + elementsArray2] = array2[elementsArray2];
+                }
+                return mergeArray;
+        }
+
+        public static void Test_MergeArrays()
+        {
+            int[] array1 = new int [0];
+            int[] array2 = new int[0];
+
+            int[] mergeArray = Block4_ArraysAndMethods.MergeArrays(array1, array2);
+
+            if (mergeArray.Length == 0)
+            {
+                Console.WriteLine("Массив ничего в себя не получил, потому что его размер 0");
+            }
+
+            foreach (int mergeElements in mergeArray)
+            {
+                Console.Write($"{mergeElements} ");
+            }
+        }
     }
 }
