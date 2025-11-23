@@ -451,6 +451,42 @@ namespace SyntaxPractice
             Console.WriteLine($"После: x={x}, y={y}");
         }
         
+        public static void GetArrayStats(int[] array, out int sum, out int max, out int min)
+        {
+            
+            if (array.Length <= 0)
+            {
+                min = 0; max = 0; sum = 0;
+                Console.WriteLine("Массив не заполнен ничем!");
+                return;
+            }
+
+            min = array[0]; max = array[0]; sum = 0;
+            foreach (int element in array)
+            {
+                if (max < element)
+                {
+                    max = element;
+                }
+                if (min > element)
+                {
+                    min = element;
+                }
+
+                sum += element;
+            }
+        }
+        public static void Test_GetArrayStats()
+        {
+            int[] array = { 1000, 200, 50, 200, 220, 150, 300, 900, 7000 };
+
+            Block4_ArraysAndMethods.GetArrayStats(array, out int sum, out int max, out int min);
+
+            Console.WriteLine("Сумма ваших чисел в массиве - " + sum);
+            Console.WriteLine("Минимум ваших чисел в массиве - " + max);
+            Console.WriteLine("Максимум ваших чисел в массиве - " + min);
+
+        }
 
     }
 }
