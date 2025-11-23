@@ -22,7 +22,8 @@ namespace HelloWorld
             //Block4_ArraysAndMethods.Test_Swap();
             //Block4_ArraysAndMethods.Test_GetArrayStats();
             //Block4_ArraysAndMethods.Test_RecursFactorial();
-            Block4_ArraysAndMethods.Test_CalculateSum();
+            //Block4_ArraysAndMethods.Test_CalculateSum();
+            Block4_ArraysAndMethods.Test_SplitString();
 
 
 

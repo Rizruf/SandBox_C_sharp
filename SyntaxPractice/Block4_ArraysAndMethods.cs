@@ -527,10 +527,23 @@ namespace SyntaxPractice
             Console.WriteLine(Block4_ArraysAndMethods.CalculateSum(array));
         }
 
-        public static char[] SplitString (string text)
+        public static char[] SplitString(string text)
         {
             char[] textSeparate;
             textSeparate = text.ToCharArray();
+            return textSeparate;
+            //return text.ToCharArray(); Либо так.
         }
+        public static void Test_SplitString()
+        {
+            string text = "Привет как дела?";
+            char[] textSparate = Block4_ArraysAndMethods.SplitString(text);
+
+            foreach (char c in textSparate)
+            {
+                Console.Write($"{c} ");
+            }
+        }
+
     }
 }
