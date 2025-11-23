@@ -545,5 +545,36 @@ namespace SyntaxPractice
             }
         }
 
+        public static string IsPalindrome(string text)
+        {
+            string test = "";
+            string clearText = "";
+
+            for (int e = 0; e < text.Length; e++)
+            {
+                if (char.IsLetter(text[e]))
+                {
+                    clearText += text[e];
+                }
+            }
+            clearText = clearText.ToLower();
+
+            for (int i = text.Length - 1; i >= 0; i--)
+            {
+                test += clearText[i];
+            }
+
+            if (clearText == test)
+            {
+                return "Это палиндром!";
+            }
+            return "Это не палиндром";
+        }
+        public static void Test_IsPalindrome ()
+        {
+            string text = "ТоПоТ";
+            Console.WriteLine(Block4_ArraysAndMethods.IsPalindrome(text));
+        }
+
     }
 }
