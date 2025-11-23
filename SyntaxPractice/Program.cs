@@ -20,8 +20,8 @@ namespace HelloWorld
             //Block4_ArraysAndMethods.Test_ShiftLeft();
             //Block4_ArraysAndMethods.Test_PrintArrayOverload();
             //Block4_ArraysAndMethods.Test_Swap();
-            Block4_ArraysAndMethods.Test_GetArrayStats();
-             
+            //Block4_ArraysAndMethods.Test_GetArrayStats();
+            Block4_ArraysAndMethods.Test_RecursFactorial();
 
 
 

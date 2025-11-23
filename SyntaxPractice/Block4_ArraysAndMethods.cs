@@ -343,20 +343,20 @@ namespace SyntaxPractice
             int lengthMrgeArray = array1.Length + array2.Length;
             int[] mergeArray = new int[lengthMrgeArray];
 
-                for (int elementsArray1 = 0; elementsArray1 < array1.Length; elementsArray1++)
-                {
-                    mergeArray[elementsArray1] = array1[elementsArray1];
+            for (int elementsArray1 = 0; elementsArray1 < array1.Length; elementsArray1++)
+            {
+                mergeArray[elementsArray1] = array1[elementsArray1];
 
-                }
-                for (int elementsArray2 = 0; elementsArray2 < array2.Length; elementsArray2++)
-                {
-                    mergeArray[array1.Length + elementsArray2] = array2[elementsArray2];
-                }
-                return mergeArray;
+            }
+            for (int elementsArray2 = 0; elementsArray2 < array2.Length; elementsArray2++)
+            {
+                mergeArray[array1.Length + elementsArray2] = array2[elementsArray2];
+            }
+            return mergeArray;
         }
         public static void Test_MergeArrays()
         {
-            int[] array1 = new int [0];
+            int[] array1 = new int[0];
             int[] array2 = new int[0];
 
             int[] mergeArray = Block4_ArraysAndMethods.MergeArrays(array1, array2);
@@ -372,7 +372,7 @@ namespace SyntaxPractice
             }
         }
 
-        public static int[] ShiftLeft(int[]array)
+        public static int[] ShiftLeft(int[] array)
         {
             int[] shiftLeftArray = array;
             int elementToSave = shiftLeftArray[0];
@@ -390,10 +390,10 @@ namespace SyntaxPractice
             int[] shiftRightArray = array;
             int elementToSave = shiftRightArray[shiftRightArray.Length - 1];
 
-            for (int elementsArrayShift = shiftRightArray.Length - 1;  elementsArrayShift >= 1;  elementsArrayShift--)
-              {
-                   shiftRightArray[elementsArrayShift] = shiftRightArray[elementsArrayShift - 1];
-              }
+            for (int elementsArrayShift = shiftRightArray.Length - 1; elementsArrayShift >= 1; elementsArrayShift--)
+            {
+                shiftRightArray[elementsArrayShift] = shiftRightArray[elementsArrayShift - 1];
+            }
             shiftRightArray[0] = elementToSave;
 
             return shiftRightArray;
@@ -413,14 +413,14 @@ namespace SyntaxPractice
             }
         }
 
-        public static void PrintArrayOverload (string[] array)
+        public static void PrintArrayOverload(string[] array)
         {
             foreach (string element in array)
             {
                 Console.Write($"{element} ");
             }
         }
-        public static void PrintArrayOverload (int[] array)
+        public static void PrintArrayOverload(int[] array)
         {
             foreach (int element in array)
             {
@@ -430,16 +430,16 @@ namespace SyntaxPractice
         public static void Test_PrintArrayOverload()
         {
             int[] array = { 10, 20, 30, 40 };
-            string[] array1 = {"nothing", "gfgf" };
+            string[] array1 = { "nothing", "gfgf" };
 
-                Block4_ArraysAndMethods.PrintArrayOverload(array1);
-                Block4_ArraysAndMethods.PrintArrayOverload(array);
-            
+            Block4_ArraysAndMethods.PrintArrayOverload(array1);
+            Block4_ArraysAndMethods.PrintArrayOverload(array);
+
         }
 
-        public static void Swap (ref int a, ref int b)
+        public static void Swap(ref int a, ref int b)
         {
-            (a,b) = (b,a);
+            (a, b) = (b, a);
         }
         public static void Test_Swap()
         {
@@ -450,10 +450,10 @@ namespace SyntaxPractice
             Block4_ArraysAndMethods.Swap(ref x, ref y);
             Console.WriteLine($"После: x={x}, y={y}");
         }
-        
+
         public static void GetArrayStats(int[] array, out int sum, out int max, out int min)
         {
-            
+
             if (array.Length <= 0)
             {
                 min = 0; max = 0; sum = 0;
@@ -488,5 +488,22 @@ namespace SyntaxPractice
 
         }
 
+        public static long RecursFactorial(int n)
+        {
+            if (n == 1)
+            {
+                return 1;
+            }
+
+            long resault = n * RecursFactorial(n - 1);
+            return resault;
+        }
+        public static void Test_RecursFactorial()
+        {
+            int number = 7;
+
+            Console.WriteLine("Факториал " + number + " равен - " + Block4_ArraysAndMethods.RecursFactorial(number));
+        }
+        
     }
 }
