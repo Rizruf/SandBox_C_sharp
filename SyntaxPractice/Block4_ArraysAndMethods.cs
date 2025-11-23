@@ -504,6 +504,33 @@ namespace SyntaxPractice
 
             Console.WriteLine("Факториал " + number + " равен - " + Block4_ArraysAndMethods.RecursFactorial(number));
         }
-        
+
+        public static int CalculateSum(params int[] array)
+        {
+            int sum = 0;
+            if (array.Length == 0)
+            {
+                return sum;
+            }
+
+            
+            foreach (int elements in array)
+            {
+                sum += elements;
+            }
+            return sum;
+        }
+        public static void Test_CalculateSum()
+        {
+            int[] array = { 10, 30, 50, 70, 90 };
+            Console.WriteLine(Block4_ArraysAndMethods.CalculateSum(10,20,50,70,90));
+            Console.WriteLine(Block4_ArraysAndMethods.CalculateSum(array));
+        }
+
+        public static char[] SplitString (string text)
+        {
+            char[] textSeparate;
+            textSeparate = text.ToCharArray();
+        }
     }
 }
