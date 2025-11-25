@@ -597,21 +597,21 @@ namespace SyntaxPractice
             Console.WriteLine(Block4_ArraysAndMethods.JoinArray(array, "; "));
         }
 
-        public static int GetMainDiagonalSum(int[,] array)
+        public static int GetMainDiagonalSum(int[,] matrix)
         {
-            if (array.Length == 0) return 0;
+            if (matrix.Length == 0) return 0;
 
             int resault = 0;
-            for (int i = 0; i < array.GetLength(0); i++)
+            for (int i = 0; i < matrix.GetLength(0); i++)
             {
-                resault += array[i, i];
+                resault += matrix[i, i];
             }
 
             return resault;
         }
         public static void Test_GetMainDiagonalSum()
         {
-            int[,] array =
+            int[,] matrix =
             {
                 {1, 2, 3, 4, 5, 6},
                 {1, 2, 3, 4, 5, 6},
@@ -621,7 +621,55 @@ namespace SyntaxPractice
                 {1, 2, 3, 4, 5, 6}
             };
 
-            Console.WriteLine(Block4_ArraysAndMethods.GetMainDiagonalSum(array));
+            Console.WriteLine(Block4_ArraysAndMethods.GetMainDiagonalSum(matrix));
+        }
+
+        public static int[,] TransposeMatrix(int[,] matrix)
+        {
+            if (matrix.Length == 0) return matrix = new int [0,0];
+
+            int rows = matrix.GetLength(0);
+            int cols = matrix.GetLength(1);
+
+            int[,] transposeMatrix = new int [cols, rows];
+
+            for (int i = 0; i < rows; i++)
+            {
+                for (int n = 0; n < cols; n++)
+                {
+                    transposeMatrix[n,i] = matrix[i,n];
+                }
+            }
+            return transposeMatrix;
+        }
+        public static void Test_TransposeMatrix ()
+        {
+            int[,] matrix =
+            {
+                {1, 3, 3, 5, 5, 6},
+                {1, 2, 3, 94, 5, 6},
+                {1, 2, 3, 4, 5, 6},
+                {11, 2, 3, 4, 75, 6},
+                {1, 22, 3, 4, 5, 66},
+                
+            };
+            Block4_ArraysAndMethods.TransposeMatrix(matrix);
+            int[,] transposeMatrix;
+
+            transposeMatrix = Block4_ArraysAndMethods.TransposeMatrix(matrix);
+
+            int rowsNew = transposeMatrix.GetLength(0);
+            int colsNew = transposeMatrix.GetLength(1);
+
+            for (int l = 0; l < rowsNew; l++)
+            {
+                for (int m = 0; m < colsNew; m++)
+                {
+                    Console.Write(transposeMatrix[l,m] + " ");
+                }
+                Console.WriteLine();
+            }
+      
         }
     }
 }
