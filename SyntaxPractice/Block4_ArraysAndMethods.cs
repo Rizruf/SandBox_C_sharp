@@ -671,5 +671,43 @@ namespace SyntaxPractice
             }
       
         }
+
+        public static void PrintJaggedArray(int[][] jaggedArray)
+        {
+            if (jaggedArray.Length == 0)
+            {
+                Console.WriteLine("Ввели не заполненный массив");
+                return;
+            }
+
+            Random rnd = new Random();
+
+            for (int j = 0; j < jaggedArray.Length; j++)
+            {
+                for (int l = 0; l < jaggedArray[j].Length; l++)
+                {
+                    int items = rnd.Next(1, 100);
+                    jaggedArray[j][l] = items;
+                    Console.Write($"{jaggedArray[j][l]} ");
+                }
+                Console.WriteLine();
+            }
+            
+        }
+        public static void Test_PrintJaggedArray()
+        {
+            int[][] jaggedArray = {new int [0], new int [0], new int[0] };
+
+            Random rnd = new Random();
+            for (int i = 0; i < jaggedArray.Length; i++)
+            {
+                int size = rnd.Next(1, 10);
+                jaggedArray[i] = new int [size];
+            }
+
+            Block4_ArraysAndMethods.PrintJaggedArray(jaggedArray);
+
+
+        }
     }
 }
