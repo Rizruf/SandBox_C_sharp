@@ -6,6 +6,9 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
+            Block5_ComplicatedTasks.Test_GetMatrixSum();
+
+
             //Block4_ArraysAndMethods.Test_PrintArray();
             //Block4_ArraysAndMethods.Test_FillArrayWithRandoms();
             //Block4_ArraysAndMethods.Test_FillCreateArrayFromUserInput();
@@ -30,7 +33,7 @@ namespace HelloWorld
             //Block4_ArraysAndMethods.Test_TransposeMatrix();
             //Block4_ArraysAndMethods.Test_PrintJaggedArray();
             //Block4_ArraysAndMethods.Test_PrintProfile();
-            Block4_ArraysAndMethods.TestAllMyMethods();
+            //Block4_ArraysAndMethods.TestAllMyMethods();
 
 
             //Type_variables.AcquaintanceTask();
