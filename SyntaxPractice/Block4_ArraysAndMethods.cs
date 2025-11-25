@@ -594,8 +594,34 @@ namespace SyntaxPractice
         public static void Test_JoinArray()
         {
             string[] array = { "Привет", "Пока", "Сегодня", "Завтра" };
-            Console.WriteLine(Block4_ArraysAndMethods.JoinArray(array, ";"));
+            Console.WriteLine(Block4_ArraysAndMethods.JoinArray(array, "; "));
         }
 
+        public static int GetMainDiagonalSum(int[,] array)
+        {
+            if (array.Length == 0) return 0;
+
+            int resault = 0;
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                resault += array[i, i];
+            }
+
+            return resault;
+        }
+        public static void Test_GetMainDiagonalSum()
+        {
+            int[,] array =
+            {
+                {1, 2, 3, 4, 5, 6},
+                {1, 2, 3, 4, 5, 6},
+                {1, 2, 3, 4, 5, 6},
+                {1, 2, 3, 4, 5, 6},
+                {1, 2, 3, 4, 5, 6},
+                {1, 2, 3, 4, 5, 6}
+            };
+
+            Console.WriteLine(Block4_ArraysAndMethods.GetMainDiagonalSum(array));
+        }
     }
 }

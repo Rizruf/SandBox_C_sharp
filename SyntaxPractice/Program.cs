@@ -25,8 +25,8 @@ namespace HelloWorld
             //Block4_ArraysAndMethods.Test_CalculateSum();
             //Block4_ArraysAndMethods.Test_SplitString();
             //Block4_ArraysAndMethods.Test_IsPalindrome();
-            Block4_ArraysAndMethods.Test_JoinArray();
-
+            //Block4_ArraysAndMethods.Test_JoinArray();
+            Block4_ArraysAndMethods.Test_GetMainDiagonalSum();
 
 
             //Type_variables.AcquaintanceTask();
