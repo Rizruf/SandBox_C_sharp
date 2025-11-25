@@ -576,5 +576,26 @@ namespace SyntaxPractice
             Console.WriteLine(Block4_ArraysAndMethods.IsPalindrome(text));
         }
 
+        public static string JoinArray(string[] array, string separator)
+        {
+            if (array.Length == 0) return "";
+
+            StringBuilder sb = new StringBuilder();
+
+            sb.Append(array[0]);
+
+            for (int i = 1; i < array.Length; i++)
+            {
+                sb.Append(separator);
+                sb.Append(array[i]);
+            }
+            return sb.ToString();
+        }
+        public static void Test_JoinArray()
+        {
+            string[] array = { "Привет", "Пока", "Сегодня", "Завтра" };
+            Console.WriteLine(Block4_ArraysAndMethods.JoinArray(array, ";"));
+        }
+
     }
 }

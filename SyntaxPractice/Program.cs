@@ -24,7 +24,8 @@ namespace HelloWorld
             //Block4_ArraysAndMethods.Test_RecursFactorial();
             //Block4_ArraysAndMethods.Test_CalculateSum();
             //Block4_ArraysAndMethods.Test_SplitString();
-            Block4_ArraysAndMethods.Test_IsPalindrome();
+            //Block4_ArraysAndMethods.Test_IsPalindrome();
+            Block4_ArraysAndMethods.Test_JoinArray();
 
 
 
