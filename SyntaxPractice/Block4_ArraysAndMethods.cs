@@ -719,5 +719,145 @@ namespace SyntaxPractice
             Block4_ArraysAndMethods.PrintProfile("Igor", 25);
             Block4_ArraysAndMethods.PrintProfile("Igor", 25,"Gagas");
         }
+
+        public static int[] MyRandomArray()
+        {
+            int[] array;
+            Random rnd = new Random();
+            int size = rnd.Next(0, 30);
+            if (size == 0)
+            {
+                array = new int[1];
+                array[0] = 0;
+                return array;
+            }
+            
+            array = new int[size];
+
+            for (int c = 0; c < array.Length; c++)
+            {
+                int rndNum = rnd.Next(1, 100);
+                array[c] = rndNum;
+            }
+            return array;
+        }
+        public static void MyPrintArray(int[] array)
+        {
+            foreach (int item in array)
+            {
+                Console.Write($"{item} ");
+            }
+            Console.WriteLine();
+        }
+        public static int[] MySortArrayMethod1(int[] array)
+        {
+            Sort(array);
+            return array;
+        }
+        public static int[] MySortArrayMethod2(int[] array)
+        {
+            //int[] newArraySort2 = (int[]) array.Clone();
+            //либо перебирать ручками
+
+            int[] newArraySort2 = new int[array.Length];
+            for (int z = 0; z < array.Length; z++)
+            {
+                newArraySort2[z] = array[z];
+            }
+
+
+            for (int i = 0; i < newArraySort2.Length; i++)
+            {
+                for (int j = 0; j < newArraySort2.Length - 1; j++)
+                {
+                    if (newArraySort2[j] > newArraySort2[j+1])
+                    {
+                        int temp = newArraySort2[j];
+                        newArraySort2[j] = newArraySort2[j+1];
+                        newArraySort2[j+1] = temp;
+                    }
+                }
+            }
+            
+            return newArraySort2;
+        }
+        public static int[] MySortArrayMethod3(int[] array)
+        {
+            Array.Sort(array);
+            return array;
+        }
+        public static int[] MyMinMaxArrayMethod1(int[] array)
+        {
+            
+            int[] minMax = new int[2];
+            minMax[1] = array.Min();
+            minMax[0] = array.Max();
+            return minMax;
+        }
+        public static int[] MyMinMaxArrayMethod2(int[] array)
+        {
+            int max = array[0];
+            int min = array[0];
+            
+            foreach (int item in array)
+            {
+                if (max < item)
+                {
+                    max = item;
+                }
+                if (min > item)
+                {
+                    min = item;
+                }
+            }
+
+            int[] minMax2 = new int[2];
+            minMax2[0] = max;
+            minMax2[1] = min;
+
+            return minMax2;
+        }
+        public static int[] MyGenerator()
+        {
+            int[] array = Block4_ArraysAndMethods.MyRandomArray();
+
+            Console.WriteLine("\nМассива с рандомным заполнением");
+            Block4_ArraysAndMethods.MyPrintArray(array);
+
+            return array;
+        }
+
+        public static void TestAllMyMethods()
+        {
+            int[] array1 = Block4_ArraysAndMethods.MyGenerator();
+
+            int[] newArraySort1 = Block4_ArraysAndMethods.MySortArrayMethod1(array1);
+            Console.WriteLine("\nОтсортированный массив первым методом");
+            Block4_ArraysAndMethods.MyPrintArray(newArraySort1);
+
+            int[] array2 = Block4_ArraysAndMethods.MyGenerator();
+
+            int[] newArraySort2 = Block4_ArraysAndMethods.MySortArrayMethod2(array2);
+            Console.WriteLine("\nОтсортированный массив вторым методом");
+            Block4_ArraysAndMethods.MyPrintArray(newArraySort2);
+
+            int[] array3 = Block4_ArraysAndMethods.MyGenerator();
+
+            int[] newArraySort3 = Block4_ArraysAndMethods.MySortArrayMethod3(array3);
+            Console.WriteLine("\nОтсортированный массив третьим методом");
+            Block4_ArraysAndMethods.MyPrintArray(newArraySort3);
+
+            int[] array4 = Block4_ArraysAndMethods.MyGenerator();
+
+            int[] MinMax1 = Block4_ArraysAndMethods.MyMinMaxArrayMethod1(array4);
+            Console.WriteLine("\nМаксимальное и минимальные значения массива первым методом");
+            Block4_ArraysAndMethods.MyPrintArray(MinMax1);
+
+            int[] array5 = Block4_ArraysAndMethods.MyGenerator();
+
+            int[] MinMax2 = Block4_ArraysAndMethods.MyMinMaxArrayMethod2(array5);
+            Console.WriteLine("\nМаксимальное и минимальные значения массива вторым методом");
+            Block4_ArraysAndMethods.MyPrintArray(MinMax2);
+        }
     }
 }
