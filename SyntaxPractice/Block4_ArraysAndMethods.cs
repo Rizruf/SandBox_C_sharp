@@ -706,8 +706,18 @@ namespace SyntaxPractice
             }
 
             Block4_ArraysAndMethods.PrintJaggedArray(jaggedArray);
+        }
 
-
+        public static void PrintProfile (string name, int age, string company = "Компания не названа")
+        {
+            Console.WriteLine($"{name} {age} {company}");
+        }
+        public static void Test_PrintProfile()
+        {
+            Block4_ArraysAndMethods.PrintProfile(name: "Igor", age: 25, company: "Gagas");
+            Block4_ArraysAndMethods.PrintProfile("Igor", age: 25);
+            Block4_ArraysAndMethods.PrintProfile("Igor", 25);
+            Block4_ArraysAndMethods.PrintProfile("Igor", 25,"Gagas");
         }
     }
 }

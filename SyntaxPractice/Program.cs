@@ -28,7 +28,8 @@ namespace HelloWorld
             //Block4_ArraysAndMethods.Test_JoinArray();
             //Block4_ArraysAndMethods.Test_GetMainDiagonalSum();
             //Block4_ArraysAndMethods.Test_TransposeMatrix();
-            Block4_ArraysAndMethods.Test_PrintJaggedArray();
+            //Block4_ArraysAndMethods.Test_PrintJaggedArray();
+            Block4_ArraysAndMethods.Test_PrintProfile();
 
 
             //Type_variables.AcquaintanceTask();
