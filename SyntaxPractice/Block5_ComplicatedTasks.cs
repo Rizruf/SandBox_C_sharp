@@ -90,11 +90,11 @@ namespace SyntaxPractice
         {
             if (matrix == null || matrix.GetLength(0) == 0 || matrix.GetLength(1) == 0)
             {
-                return new int[,] { {0, 0 } };
+                return new int[,] { { 0, 0 } };
             }
 
             int rows = matrix.GetLength(0);
-            int cols = matrix.GetLength(1); 
+            int cols = matrix.GetLength(1);
 
             int[,] newArray = new int[cols, rows];
 
@@ -102,7 +102,7 @@ namespace SyntaxPractice
             {
                 for (int j = 0; j < cols; j++)
                 {
-                    newArray[j,i] = matrix[i,j];
+                    newArray[j, i] = matrix[i, j];
                 }
             }
             return newArray;
@@ -122,7 +122,7 @@ namespace SyntaxPractice
             {
                 for (int l = 0; l < newArray.GetLength(1); l++)
                 {
-                    Console.Write($"{newArray[k,l]} ");
+                    Console.Write($"{newArray[k, l]} ");
                 }
                 Console.WriteLine();
             }
