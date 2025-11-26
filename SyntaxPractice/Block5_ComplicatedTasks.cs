@@ -135,7 +135,7 @@ namespace SyntaxPractice
                 return new int[,] { { 0, 0 } };
             }
 
-            int temp, value1, value2;
+            int temp;
 
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
@@ -167,6 +167,50 @@ namespace SyntaxPractice
                     Console.Write($"{newMatrix[k, l]} ");
                 }
                 Console.WriteLine();
+            }
+        }
+
+        public static void MultiplyMatrixByNumber(int number, int[,] matrix)
+        {
+            if (matrix == null || matrix.GetLength(0) == 0 || matrix.GetLength(1) == 0)
+            {
+                return; 
+            }
+
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    matrix[i, j] *= number;
+                }
+            }
+        }
+        public static void Test_MultiplyMatrixByNumber()
+        {
+            int[,] matrix =
+            {
+                {1,3,5,7},
+                {11,23,57,21 },
+                {213,43,231,4312}
+            };
+            int num = 10;
+
+            Block5_ComplicatedTasks.MultiplyMatrixByNumber(num, matrix);
+
+            if (matrix != null)
+            {
+                for (int k = 0; k < matrix.GetLength(0); k++)
+                {
+                    for (int l = 0; l < matrix.GetLength(1); l++)
+                    {
+                        Console.Write($"{matrix[k, l]} ");
+                    }
+                    Console.WriteLine();
+                }
+            }
+            else
+            {
+                Console.WriteLine("Тест с null пройден: Матрица осталась null, метод не упал.");
             }
         }
     }
