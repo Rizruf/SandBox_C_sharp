@@ -213,5 +213,39 @@ namespace SyntaxPractice
                 Console.WriteLine("Тест с null пройден: Матрица осталась null, метод не упал.");
             }
         }
+
+        public static int GetTotalLengthOfJaggedArray(int[][] array)
+        {
+            if(array == null)
+            {
+                return 0;
+            }
+            int count = 0;
+            //int sum = 0;
+
+            
+             for (int i = 0; i < array.Length; i++)
+             {
+                 if (array[i] != null)
+                 {
+                  count += array[i].Length;
+                  //sum += array[i][j];
+                 }
+             }
+            
+            return count;
+        }
+        public static void Test_GetTotalLengthOfJaggedArray()
+        {
+            int[][] array = new int [5][];
+            {
+                array[0] = new int[] {1,3,5,7};
+                array[1] = new int[] { 11, 23, 57, 21 };
+                array[2] = new int[] { 213, 43, 231, 4312 };
+                array[3] = new int[] { 213, 5543, 24431, 431112 };
+                array[4] = new int[] { 213, 423, 2331, 4312 };
+            }
+            Console.WriteLine(Block5_ComplicatedTasks.GetTotalLengthOfJaggedArray(array));
+        }
     }
 }

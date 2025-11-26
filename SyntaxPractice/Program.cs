@@ -10,7 +10,8 @@ namespace HelloWorld
             //Block5_ComplicatedTasks.Test_FindMaxValueCoordinates();
             //Block5_ComplicatedTasks.Test_TransposeMatrix();
             //Block5_ComplicatedTasks.Test_MirrorMatrixHorizontally();
-            Block5_ComplicatedTasks.Test_MultiplyMatrixByNumber();
+            //Block5_ComplicatedTasks.Test_MultiplyMatrixByNumber();
+            Block5_ComplicatedTasks.Test_GetTotalLengthOfJaggedArray();
 
 
             //Block4_ArraysAndMethods.Test_PrintArray();
