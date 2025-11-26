@@ -128,5 +128,46 @@ namespace SyntaxPractice
             }
         }
 
+        public static int[,] MirrorMatrixHorizontally (int[,] matrix)
+        {
+            if (matrix == null || matrix.GetLength(0) == 0 || matrix.GetLength(1) == 0)
+            {
+                return new int[,] { { 0, 0 } };
+            }
+
+            int temp, value1, value2;
+
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1)/2; j++)
+                {
+                    temp = matrix[i, j];
+                    matrix[i,j] = matrix[i, matrix.GetLength(1) - 1 - j];
+                    matrix[i, matrix.GetLength(1) - 1 - j] = temp;
+                }
+            }
+
+            return matrix;
+        }
+        public static void Test_MirrorMatrixHorizontally()
+        {
+            int[,] matrix =
+            {
+                {1,3,5,7},
+                {11,23,57,21 },
+                {213,43,231,4312}
+            };
+
+            int[,] newMatrix = Block5_ComplicatedTasks.MirrorMatrixHorizontally(matrix);
+
+            for (int k = 0; k < newMatrix.GetLength(0); k++)
+            {
+                for (int l = 0; l < newMatrix.GetLength(1); l++)
+                {
+                    Console.Write($"{newMatrix[k, l]} ");
+                }
+                Console.WriteLine();
+            }
+        }
     }
 }
