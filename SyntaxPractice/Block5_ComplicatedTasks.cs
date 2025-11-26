@@ -43,5 +43,90 @@ namespace SyntaxPractice
 
             Console.WriteLine("Сумма матрицы равна - " + Block5_ComplicatedTasks.GetMatrixSum(array));
         }
+
+        public static int[] FindMaxValueCoordinates(int[,] matrix)
+        {
+            if (matrix == null || matrix.GetLength(0) == 0 || matrix.GetLength(1) == 0)
+            {
+                return new int[] { 0, 0 }; 
+            }
+
+            int max = matrix[0, 0];
+            int coordX = 0;
+            int coordY = 0;
+
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    if (matrix[i, j] > max) 
+                    {
+                        max = matrix[i, j]; 
+                        coordX = i;         
+                        coordY = j;
+                    }
+                }
+            }
+
+            return new int[] { coordX, coordY };
+        }
+        public static void Test_FindMaxValueCoordinates()
+        {
+            int[,] matrix =
+            {
+                {1,3,5,7},
+                {11,23,57,21 },
+                {213,43,231,4312}
+            };
+
+            int[] coordinates = Block5_ComplicatedTasks.FindMaxValueCoordinates(matrix);
+            foreach (int item in coordinates)
+            {
+                Console.Write($"{item}");
+            }
+        }
+
+        public static int[,] TransposeMatrix(int[,] matrix)
+        {
+            if (matrix == null || matrix.GetLength(0) == 0 || matrix.GetLength(1) == 0)
+            {
+                return new int[,] { {0, 0 } };
+            }
+
+            int rows = matrix.GetLength(0);
+            int cols = matrix.GetLength(1); 
+
+            int[,] newArray = new int[cols, rows];
+
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < cols; j++)
+                {
+                    newArray[j,i] = matrix[i,j];
+                }
+            }
+            return newArray;
+        }
+        public static void Test_TransposeMatrix()
+        {
+            int[,] matrix =
+            {
+                {1,3,5,7},
+                {11,23,57,21 },
+                {213,43,231,4312}
+            };
+
+            int[,] newArray = Block5_ComplicatedTasks.TransposeMatrix(matrix);
+
+            for (int k = 0; k < newArray.GetLength(0); k++)
+            {
+                for (int l = 0; l < newArray.GetLength(1); l++)
+                {
+                    Console.Write($"{newArray[k,l]} ");
+                }
+                Console.WriteLine();
+            }
+        }
+
     }
 }

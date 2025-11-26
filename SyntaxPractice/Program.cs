@@ -6,7 +6,9 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Block5_ComplicatedTasks.Test_GetMatrixSum();
+            //Block5_ComplicatedTasks.Test_GetMatrixSum();
+            //Block5_ComplicatedTasks.Test_FindMaxValueCoordinates();
+            Block5_ComplicatedTasks.Test_TransposeMatrix();
 
 
             //Block4_ArraysAndMethods.Test_PrintArray();
