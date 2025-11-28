@@ -336,7 +336,6 @@ namespace SyntaxPractice
                     maxLength = array[i].Length;
                     arrayOut = array[i];
                 }
-
             }
             return arrayOut;
         }
