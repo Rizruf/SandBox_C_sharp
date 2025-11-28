@@ -12,7 +12,9 @@ namespace HelloWorld
             //Block5_ComplicatedTasks.Test_MirrorMatrixHorizontally();
             //Block5_ComplicatedTasks.Test_MultiplyMatrixByNumber();
             //Block5_ComplicatedTasks.Test_GetTotalLengthOfJaggedArray();
-            Block5_ComplicatedTasks.Test_CreateRandomJaggedArray();
+            //Block5_ComplicatedTasks.Test_CreateRandomJaggedArray();
+            //Block5_ComplicatedTasks.Test_SortJaggedArrayRows();
+            Block5_ComplicatedTasks.Test_GetLongestRow();
 
 
             //Block4_ArraysAndMethods.Test_PrintArray();

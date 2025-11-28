@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace SyntaxPractice
 {
@@ -286,7 +287,80 @@ namespace SyntaxPractice
             }
         }
 
+        public static int[][] SortJaggedArrayRows (int[][] array)
+        {
+            if (array.Length == 0)
+            {
+                int[][] array1 = new int[1][];
+                array1[0] = new int[] { 0 };
+                return array1;
+            }
+            for (int i = 0; i < array.Length; i++)
+            {
+                Array.Sort(array[i]);
+            }
+            return array;
+        }
+        public static void Test_SortJaggedArrayRows()
+        {
+            int[][] array = Block5_ComplicatedTasks.CreateRandomJaggedArray(10, 10);
 
+            Block5_ComplicatedTasks.SortJaggedArrayRows(array);
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                for (int j = 0; j < array[i].Length; j++)
+                {
+                    Console.Write($"{array[i][j]} ");
+                }
+                Console.WriteLine();
+            }
+        }
+
+        public static int[] GetLongestRow(int[][] array)
+        {
+
+            if (array.Length == 0)
+            {
+                int[] array1 = new int[1];
+                array1[0] = 0;
+                return array1;
+            }
+
+            int maxLength = array[0].Length;
+            int[] arrayOut = array[0];
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i].Length > maxLength)
+                {
+                    maxLength = array[i].Length;
+                    arrayOut = array[i];
+                }
+
+            }
+            return arrayOut;
+        }
+        public static void Test_GetLongestRow()
+        {
+            int[][] array = Block5_ComplicatedTasks.CreateRandomJaggedArray(10, 10);
+            int[] arrayOut = Block5_ComplicatedTasks.GetLongestRow(array);
+
+            for (int i = 0; i < arrayOut.Length; i++)
+            {
+               Console.Write($"{arrayOut[i]} ");
+            }
+
+            Console.WriteLine(); Console.WriteLine(); Console.WriteLine();
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                for (int j = 0; j < array[i].Length; j++)
+                {
+                    Console.Write($"{array[i][j]} ");
+                }
+                Console.WriteLine();
+            }
+        }
 
 
     }
