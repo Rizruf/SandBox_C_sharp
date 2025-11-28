@@ -361,6 +361,65 @@ namespace SyntaxPractice
             }
         }
 
+        public static double[] GetRowsAverages(int[][] array)
+        {
+            if (array.Length == 0)
+            {
+                double[] array1 = new double[1];
+                array1[0] = 0;
+                return array1;
+            }
+
+            double[] array2 = new double[array.Length];
+            double temp = 0; double couts = 0;
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                for (int j = 0; j < array[i].Length; j++)
+                {
+                    temp += array[i][j];
+                }
+                couts = array[i].Length;
+                array2[i] = temp/couts;
+                temp = 0;
+            }
+            return array2;
+        }
+        public static void Test_GetRowsAverages()
+        {
+            int[][] array = new int[5][];
+            array[0] = new int[10];
+            array[1] = new int[10];
+            array[2] = new int[10];
+            array[3] = new int[10];
+            array[4] = new int[10];
+
+            Random rnd  = new Random();
+            for (int i = 0; i < array.Length; i++)
+            {
+                for (int j = 0; j < array[i].Length; j++)
+                {
+                    array[i][j] = rnd.Next(1, 100);
+                }
+            }
+            double[] arrayOut = Block5_ComplicatedTasks.GetRowsAverages(array);
+
+            for (int i = 0; i < arrayOut.Length; i++)
+            {
+                Console.Write($"{arrayOut[i]} ");
+            }
+
+            Console.WriteLine(); Console.WriteLine(); Console.WriteLine();
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                for (int j = 0; j < array[i].Length; j++)
+                {
+                    Console.Write($"{array[i][j]} ");
+                }
+                Console.WriteLine();
+            }
+        }
 
     }
 }

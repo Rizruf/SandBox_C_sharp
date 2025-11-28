@@ -14,7 +14,8 @@ namespace HelloWorld
             //Block5_ComplicatedTasks.Test_GetTotalLengthOfJaggedArray();
             //Block5_ComplicatedTasks.Test_CreateRandomJaggedArray();
             //Block5_ComplicatedTasks.Test_SortJaggedArrayRows();
-            Block5_ComplicatedTasks.Test_GetLongestRow();
+            //Block5_ComplicatedTasks.Test_GetLongestRow();
+            Block5_ComplicatedTasks.Test_GetRowsAverages();
 
 
             //Block4_ArraysAndMethods.Test_PrintArray();
