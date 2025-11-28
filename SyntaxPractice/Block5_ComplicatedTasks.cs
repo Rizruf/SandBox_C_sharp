@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -247,5 +248,46 @@ namespace SyntaxPractice
             }
             Console.WriteLine(Block5_ComplicatedTasks.GetTotalLengthOfJaggedArray(array));
         }
+
+        public static int[][] CreateRandomJaggedArray(int rows, int cols)
+        {
+            if (rows == 0 || cols == 0)
+            {
+                int[][] array1 =  new int [1][];
+                array1[0] = new int[] { 0 };
+                return array1;
+            }
+
+            Random rnd = new Random();
+            int[][] array = new int[rows][];
+
+            for (int i = 0; i < rows; i++)
+            {
+                array[i] = new int[rnd.Next(1,cols + 1)];
+                for (int j = 0; j < array[i].Length; j++)
+                {
+                    array [i][j] = rnd.Next (0, 100);
+                }
+            }
+            return array;
+        }
+        public static void Test_CreateRandomJaggedArray()
+        {
+           int rows = 10, cols = 10;
+            int[][] array = Block5_ComplicatedTasks.CreateRandomJaggedArray(rows, cols);
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                for (int j = 0; j < array[i].Length; j++)
+                {
+                    Console.Write($"{array[i][j]} ");
+                }
+                Console.WriteLine();
+            }
+        }
+
+
+
+
     }
 }

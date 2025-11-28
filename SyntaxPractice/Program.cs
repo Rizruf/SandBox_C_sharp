@@ -11,7 +11,8 @@ namespace HelloWorld
             //Block5_ComplicatedTasks.Test_TransposeMatrix();
             //Block5_ComplicatedTasks.Test_MirrorMatrixHorizontally();
             //Block5_ComplicatedTasks.Test_MultiplyMatrixByNumber();
-            Block5_ComplicatedTasks.Test_GetTotalLengthOfJaggedArray();
+            //Block5_ComplicatedTasks.Test_GetTotalLengthOfJaggedArray();
+            Block5_ComplicatedTasks.Test_CreateRandomJaggedArray();
 
 
             //Block4_ArraysAndMethods.Test_PrintArray();
