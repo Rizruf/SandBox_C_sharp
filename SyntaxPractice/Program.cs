@@ -6,6 +6,9 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
+            Block6_ComplicatedTasks.GameGuessNumber2();
+
+
             //Block5_ComplicatedTasks.Test_GetMatrixSum();
             //Block5_ComplicatedTasks.Test_FindMaxValueCoordinates();
             //Block5_ComplicatedTasks.Test_TransposeMatrix();
@@ -15,7 +18,7 @@ namespace HelloWorld
             //Block5_ComplicatedTasks.Test_CreateRandomJaggedArray();
             //Block5_ComplicatedTasks.Test_SortJaggedArrayRows();
             //Block5_ComplicatedTasks.Test_GetLongestRow();
-            Block5_ComplicatedTasks.Test_GetRowsAverages();
+            //Block5_ComplicatedTasks.Test_GetRowsAverages();
 
 
             //Block4_ArraysAndMethods.Test_PrintArray();
