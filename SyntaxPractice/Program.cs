@@ -6,7 +6,8 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Block6_ComplicatedTasks.GameGuessNumber2();
+            //Block6_ComplicatedTasks.GameGuessNumber2();
+            Block6_ComplicatedTasks.ATMmachine2();
 
 
             //Block5_ComplicatedTasks.Test_GetMatrixSum();
