@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace SyntaxPractice
@@ -324,7 +325,7 @@ namespace SyntaxPractice
                                 {
                                     if (rub > 0)
                                     {
-                                        newCurrencyValue = (rub / Block6_ComplicatedTasks.CurrencyContainer(currency));
+                                        newCurrencyValue = (rub / CurrencyContainer(currency));
                                         Console.WriteLine("Ваша сумма в установленной валюте равна - " + $"{newCurrencyValue}");
                                         break;
                                     }
@@ -350,7 +351,48 @@ namespace SyntaxPractice
             }
         }
 
+        public static int SumOddNumbers(int border)
+        {
+            if (border == 0)
+            {
+                return 0;
+            }
+            
+            int results = 0;
 
+            for (int i = 1; i <= border; i+=2)
+            {
+               results += i;
+            }
+            return results;
+        }
+        public static void UserOddNumbers()
+        {
+            while (true)
+            {
+                Console.WriteLine("Задайте границу для подсчета");
+                string border = Console.ReadLine();
+
+                if (int.TryParse(border, out int currentBorder))
+                {
+                    if (currentBorder >= 0)
+                    {
+                        Console.WriteLine("Сумма нечетных чисел до заданной границы - " + SumOddNumbers(currentBorder));
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Введите положительное число!");
+                        continue;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Вы ввели не корректное значение, повторите!");
+                    continue;
+                }
+            }
+        }
 
     }
 }
