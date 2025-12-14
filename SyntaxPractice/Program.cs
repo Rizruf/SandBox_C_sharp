@@ -8,7 +8,8 @@ namespace HelloWorld
         {
             //Exam.Test_GetArrayStatistics();
             //Exam.RunCaesarCipher();
-            Exam.Test_ReverseWords();
+            //Exam.Test_ReverseWords();
+            Exam.Test_SelectionSort();
 
             //Block6_ComplicatedTasks.GameGuessNumber2();
             //Block6_ComplicatedTasks.ATMachine2();

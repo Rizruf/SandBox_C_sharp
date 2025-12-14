@@ -108,7 +108,7 @@ namespace SyntaxPractice
                     sb.Append(' ');
                     continue;
                 }
-           
+
                 for (int j = 0; j < alphabet.Length; j++)
                 {
                     if (text[i] == alphabet[j])
@@ -198,6 +198,42 @@ namespace SyntaxPractice
                 Console.WriteLine("Вы ввели пустую строку, повторите!");
             }
             else Console.WriteLine(ReverseWords(text));
+        }
+        //Конец задачи 3
+
+        public static string SelectionSort(int[] array)
+        {
+
+            for (int i = 0; i < array.Length - 1; i++)
+            {
+                int indexSwap = i;
+
+                for (int j = i + 1; j < array.Length; j++)
+                {
+                    if (array[j] < array[indexSwap])
+                    {
+                        indexSwap = j;
+                    }
+                }
+                if (indexSwap != i)
+                {
+                    (array[i], array[indexSwap]) = (array[indexSwap], array[i]);
+                }
+            }
+            return string.Join(" ", array);
+        }
+        public static void Test_SelectionSort()
+        {
+            Random rnd = new Random();
+            int[] array = new int[10];
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = rnd.Next(0, 100);
+                Console.Write($"{array[i]} ");
+            } 
+
+            Console.WriteLine("\nСортированый массив! - " + SelectionSort(array));
         }
     }
 }
