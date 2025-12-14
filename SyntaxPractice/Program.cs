@@ -6,7 +6,8 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Exam.Test_GetArrayStatistics();
+            //Exam.Test_GetArrayStatistics();
+            Exam.RunCaesarCipher();
 
             //Block6_ComplicatedTasks.GameGuessNumber2();
             //Block6_ComplicatedTasks.ATMachine2();
