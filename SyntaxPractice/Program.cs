@@ -7,7 +7,8 @@ namespace HelloWorld
         static void Main(string[] args)
         {
             //Exam.Test_GetArrayStatistics();
-            Exam.RunCaesarCipher();
+            //Exam.RunCaesarCipher();
+            Exam.Test_ReverseWords();
 
             //Block6_ComplicatedTasks.GameGuessNumber2();
             //Block6_ComplicatedTasks.ATMachine2();

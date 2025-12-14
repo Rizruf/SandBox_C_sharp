@@ -160,5 +160,44 @@ namespace SyntaxPractice
                 }
             }
         }
+        //Конец второго задания
+
+        public static string ReverseWords(string text)
+        {
+            string[] arrayWords = text.Split(" ");
+
+            string[] reverseWords = new string[arrayWords.Length];
+
+            for (int i = 0; i < arrayWords.Length; i++)
+            {
+                reverseWords[i] = arrayWords[arrayWords.Length - 1 - i];
+            }
+
+            return string.Join(" ", reverseWords);
+
+            //StringBuilder sb = new StringBuilder();
+
+            //for (int i = arrayWords.Length - 1; i >= 0; i--)
+            //{
+            //    if (arrayWords[i] == string.Empty)
+            //    {
+            //        sb.Append(" ");
+            //        continue;
+            //    }
+            //    sb.Append($"{arrayWords[i]} ");
+            //}
+            //return sb.ToString(); 
+        }
+        public static void Test_ReverseWords()
+        {
+            Console.WriteLine("Введите предложение для зазворота его задом на перед!");
+            string text = Console.ReadLine();
+
+            if (string.IsNullOrEmpty(text))
+            {
+                Console.WriteLine("Вы ввели пустую строку, повторите!");
+            }
+            else Console.WriteLine(ReverseWords(text));
+        }
     }
 }
